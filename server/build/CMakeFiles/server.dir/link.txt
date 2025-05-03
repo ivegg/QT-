@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/server.dir/CommandHandler.cpp.o CMakeFiles/server.dir/chatTask.cpp.o CMakeFiles/server.dir/common.cpp.o CMakeFiles/server.dir/main.cpp.o CMakeFiles/server.dir/session.cpp.o -o server  -lpthread thirdparty/SQLiteCpp/libSQLiteCpp.a thirdparty/SQLiteCpp/sqlite3/libsqlite3.a -ldl 
