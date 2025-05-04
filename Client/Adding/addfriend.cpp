@@ -2,6 +2,7 @@
 #include "ui_addfriend.h"
 #include <QGraphicsDropShadowEffect>
 
+#include "addgroup.h"
 
 AddFriend::AddFriend(SelfInfo _info,TcpClient* fd,QWidget *parent) :
      QWidget(parent),
@@ -16,6 +17,8 @@ AddFriend::AddFriend(SelfInfo _info,TcpClient* fd,QWidget *parent) :
      qDebug() << info.sig;
      connect(t,&TcpClient::CallAddFriend,this,&AddFriend::CmdHandler);
      connect(ui->radioButton_friend,&QRadioButton::toggled,this,&AddFriend::on_radioButton_toggled);
+
+     connect(ui->pushButton_create, &QPushButton::clicked, this, &AddFriend::on_pushButton_create_clicked);
 }
 
 AddFriend::~AddFriend()
@@ -92,4 +95,18 @@ void AddFriend::CmdHandler(json msg)
         }
     }
 
+}
+
+// 新增：创建群聊按钮槽函数
+void AddFriend::on_pushButton_create_clicked()
+{
+    if (addGroupWin && addGroupWin->isVisible()) {
+        addGroupWin->raise();
+        addGroupWin->activateWindow();
+        return;
+    }
+    addGroupWin = new AddGroup(info, t, nullptr);
+    addGroupWin->setAttribute(Qt::WA_DeleteOnClose);
+    connect(addGroupWin, &AddGroup::destroyed, [this]() { addGroupWin = nullptr; });
+    addGroupWin->show();
 }

@@ -261,6 +261,7 @@ void Logging::on_pushButton_regist_clicked()
     msg.insert("cmd", cmd_regist); // 注册命令
     msg.insert("account", ui->lineEdit_account_2->text());
     msg.insert("password", ui->lineEdit_password_2->text());
+    msg.insert("name", ui->lineEdit_name->text());
     t->SendMsg(msg); // 发送消息到服务器
 }
 

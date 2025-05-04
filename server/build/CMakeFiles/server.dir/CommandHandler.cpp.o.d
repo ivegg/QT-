@@ -326,4 +326,6 @@ CMakeFiles/server.dir/CommandHandler.cpp.o: \
  /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/ordered_map.hpp \
  /usr/include/c++/11/any \
  /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/macro_unscope.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+ /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /usr/include/c++/11/set /usr/include/c++/11/bits/stl_set.h \
+ /usr/include/c++/11/bits/stl_multiset.h

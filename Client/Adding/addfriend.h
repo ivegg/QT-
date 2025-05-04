@@ -5,6 +5,8 @@
 #include <QVector>
 #include "tcpclient.h"
 
+#include "addgroup.h" // 新增：包含群聊窗口头文件
+
 namespace Ui {
 class AddFriend;
 }
@@ -28,6 +30,8 @@ private slots:
 
     void on_pushButton_add_clicked();
 
+    void on_pushButton_create_clicked(); // 新增：创建群聊按钮槽
+
 private:
     Ui::AddFriend *ui;
     QVector<QString> list;
@@ -35,6 +39,8 @@ private:
     //0 friend 1 group
     int m_type = 0;
     SelfInfo info;
+
+    AddGroup* addGroupWin = nullptr;
 };
 
 #endif // ADDFRIEND_H

@@ -286,7 +286,7 @@ QPushButton::hover {
        <string notr="true">color: rgb(166,166,166);</string>
       </property>
       <property name="text">
-       <string>OurChat</string>
+       <string>WeChat</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_seePassword">

@@ -85,7 +85,7 @@ void Client::RefreshGroupList()
 // 初始化界面外观
 void Client::InitUI()
 {
-    this->setWindowTitle("微信"); // 设置窗口标题
+    this->setWindowTitle("WeChat"); // 设置窗口标题
     this->setWindowFlags(Qt::Window); // 使用标准系统窗口
     this->setMinimumSize(800, 600); // 设置最小尺寸
 

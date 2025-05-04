@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 FORMS += \
     Adding/addfriend.ui \
+    Adding/addgroup.ui \
     Adding/systemmessage.ui \
     Adding/verificationitem.ui \
     Chatting/chatwindow.ui \
@@ -30,6 +31,7 @@ FORMS += \
 
 HEADERS += \
     Adding/addfriend.h \
+    Adding/addgroup.h \
     Adding/systemmessage.h \
     Adding/verificationitem.h \
     Chatting/chatlistwidget.h \
@@ -50,6 +52,7 @@ HEADERS += \
 
 SOURCES += \
     Adding/addfriend.cpp \
+    Adding/addgroup.cpp \
     Adding/systemmessage.cpp \
     Adding/verificationitem.cpp \
     Chatting/chatlistwidget.cpp \
