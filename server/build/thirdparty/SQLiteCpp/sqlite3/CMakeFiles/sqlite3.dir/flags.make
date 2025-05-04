@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_JSON1
 
-C_INCLUDES = -I/home/iveg/chat-forge/server/thirdparty/SQLiteCpp/sqlite3
+C_INCLUDES = -I/home/share/chat-forge/server/thirdparty/SQLiteCpp/sqlite3
 
-C_FLAGS = -g -fPIC -fstack-protector -ffunction-sections -Wimplicit-fallthrough=0 -Wno-cast-function-type
+C_FLAGS = -fPIC -fstack-protector -ffunction-sections -Wimplicit-fallthrough=0 -Wno-cast-function-type
 

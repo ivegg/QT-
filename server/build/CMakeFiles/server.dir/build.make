@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/iveg/chat-forge/server
+CMAKE_SOURCE_DIR = /home/share/chat-forge/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/iveg/chat-forge/server/build
+CMAKE_BINARY_DIR = /home/share/chat-forge/server/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/server.dir/depend.make
@@ -70,74 +70,74 @@ include CMakeFiles/server.dir/progress.make
 include CMakeFiles/server.dir/flags.make
 
 CMakeFiles/server.dir/CommandHandler.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/CommandHandler.cpp.o: /home/iveg/chat-forge/server/CommandHandler.cpp
+CMakeFiles/server.dir/CommandHandler.cpp.o: /home/share/chat-forge/server/CommandHandler.cpp
 CMakeFiles/server.dir/CommandHandler.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/CommandHandler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/CommandHandler.cpp.o -MF CMakeFiles/server.dir/CommandHandler.cpp.o.d -o CMakeFiles/server.dir/CommandHandler.cpp.o -c /home/iveg/chat-forge/server/CommandHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/CommandHandler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/CommandHandler.cpp.o -MF CMakeFiles/server.dir/CommandHandler.cpp.o.d -o CMakeFiles/server.dir/CommandHandler.cpp.o -c /home/share/chat-forge/server/CommandHandler.cpp
 
 CMakeFiles/server.dir/CommandHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/CommandHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iveg/chat-forge/server/CommandHandler.cpp > CMakeFiles/server.dir/CommandHandler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/share/chat-forge/server/CommandHandler.cpp > CMakeFiles/server.dir/CommandHandler.cpp.i
 
 CMakeFiles/server.dir/CommandHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/CommandHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iveg/chat-forge/server/CommandHandler.cpp -o CMakeFiles/server.dir/CommandHandler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/share/chat-forge/server/CommandHandler.cpp -o CMakeFiles/server.dir/CommandHandler.cpp.s
 
 CMakeFiles/server.dir/chatTask.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/chatTask.cpp.o: /home/iveg/chat-forge/server/chatTask.cpp
+CMakeFiles/server.dir/chatTask.cpp.o: /home/share/chat-forge/server/chatTask.cpp
 CMakeFiles/server.dir/chatTask.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/chatTask.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/chatTask.cpp.o -MF CMakeFiles/server.dir/chatTask.cpp.o.d -o CMakeFiles/server.dir/chatTask.cpp.o -c /home/iveg/chat-forge/server/chatTask.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/chatTask.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/chatTask.cpp.o -MF CMakeFiles/server.dir/chatTask.cpp.o.d -o CMakeFiles/server.dir/chatTask.cpp.o -c /home/share/chat-forge/server/chatTask.cpp
 
 CMakeFiles/server.dir/chatTask.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/chatTask.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iveg/chat-forge/server/chatTask.cpp > CMakeFiles/server.dir/chatTask.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/share/chat-forge/server/chatTask.cpp > CMakeFiles/server.dir/chatTask.cpp.i
 
 CMakeFiles/server.dir/chatTask.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/chatTask.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iveg/chat-forge/server/chatTask.cpp -o CMakeFiles/server.dir/chatTask.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/share/chat-forge/server/chatTask.cpp -o CMakeFiles/server.dir/chatTask.cpp.s
 
 CMakeFiles/server.dir/common.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/common.cpp.o: /home/iveg/chat-forge/server/common.cpp
+CMakeFiles/server.dir/common.cpp.o: /home/share/chat-forge/server/common.cpp
 CMakeFiles/server.dir/common.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/common.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/common.cpp.o -MF CMakeFiles/server.dir/common.cpp.o.d -o CMakeFiles/server.dir/common.cpp.o -c /home/iveg/chat-forge/server/common.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/common.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/common.cpp.o -MF CMakeFiles/server.dir/common.cpp.o.d -o CMakeFiles/server.dir/common.cpp.o -c /home/share/chat-forge/server/common.cpp
 
 CMakeFiles/server.dir/common.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/common.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iveg/chat-forge/server/common.cpp > CMakeFiles/server.dir/common.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/share/chat-forge/server/common.cpp > CMakeFiles/server.dir/common.cpp.i
 
 CMakeFiles/server.dir/common.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/common.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iveg/chat-forge/server/common.cpp -o CMakeFiles/server.dir/common.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/share/chat-forge/server/common.cpp -o CMakeFiles/server.dir/common.cpp.s
 
 CMakeFiles/server.dir/main.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/main.cpp.o: /home/iveg/chat-forge/server/main.cpp
+CMakeFiles/server.dir/main.cpp.o: /home/share/chat-forge/server/main.cpp
 CMakeFiles/server.dir/main.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/main.cpp.o -MF CMakeFiles/server.dir/main.cpp.o.d -o CMakeFiles/server.dir/main.cpp.o -c /home/iveg/chat-forge/server/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/main.cpp.o -MF CMakeFiles/server.dir/main.cpp.o.d -o CMakeFiles/server.dir/main.cpp.o -c /home/share/chat-forge/server/main.cpp
 
 CMakeFiles/server.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iveg/chat-forge/server/main.cpp > CMakeFiles/server.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/share/chat-forge/server/main.cpp > CMakeFiles/server.dir/main.cpp.i
 
 CMakeFiles/server.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iveg/chat-forge/server/main.cpp -o CMakeFiles/server.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/share/chat-forge/server/main.cpp -o CMakeFiles/server.dir/main.cpp.s
 
 CMakeFiles/server.dir/session.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/session.cpp.o: /home/iveg/chat-forge/server/session.cpp
+CMakeFiles/server.dir/session.cpp.o: /home/share/chat-forge/server/session.cpp
 CMakeFiles/server.dir/session.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server.dir/session.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/session.cpp.o -MF CMakeFiles/server.dir/session.cpp.o.d -o CMakeFiles/server.dir/session.cpp.o -c /home/iveg/chat-forge/server/session.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server.dir/session.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/session.cpp.o -MF CMakeFiles/server.dir/session.cpp.o.d -o CMakeFiles/server.dir/session.cpp.o -c /home/share/chat-forge/server/session.cpp
 
 CMakeFiles/server.dir/session.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/session.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iveg/chat-forge/server/session.cpp > CMakeFiles/server.dir/session.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/share/chat-forge/server/session.cpp > CMakeFiles/server.dir/session.cpp.i
 
 CMakeFiles/server.dir/session.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/session.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iveg/chat-forge/server/session.cpp -o CMakeFiles/server.dir/session.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/share/chat-forge/server/session.cpp -o CMakeFiles/server.dir/session.cpp.s
 
 # Object files for target server
 server_OBJECTS = \
@@ -159,7 +159,7 @@ server: CMakeFiles/server.dir/build.make
 server: thirdparty/SQLiteCpp/libSQLiteCpp.a
 server: thirdparty/SQLiteCpp/sqlite3/libsqlite3.a
 server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -171,6 +171,6 @@ CMakeFiles/server.dir/clean:
 .PHONY : CMakeFiles/server.dir/clean
 
 CMakeFiles/server.dir/depend:
-	cd /home/iveg/chat-forge/server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iveg/chat-forge/server /home/iveg/chat-forge/server /home/iveg/chat-forge/server/build /home/iveg/chat-forge/server/build /home/iveg/chat-forge/server/build/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/share/chat-forge/server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/share/chat-forge/server /home/share/chat-forge/server /home/share/chat-forge/server/build /home/share/chat-forge/server/build /home/share/chat-forge/server/build/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/server.dir/depend
 

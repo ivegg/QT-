@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/iveg/chat-forge/server
+CMAKE_SOURCE_DIR = /home/share/chat-forge/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/iveg/chat-forge/server/build
+CMAKE_BINARY_DIR = /home/share/chat-forge/server/build
 
 # Include any dependencies generated for this target.
 include thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/depend.make
@@ -70,18 +70,18 @@ include thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/progress.make
 include thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/flags.make
 
 thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o: thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/flags.make
-thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o: /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.c
+thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o: /home/share/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.c
 thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o: thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o -MF CMakeFiles/sqlite3.dir/sqlite3.c.o.d -o CMakeFiles/sqlite3.dir/sqlite3.c.o -c /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o"
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o -MF CMakeFiles/sqlite3.dir/sqlite3.c.o.d -o CMakeFiles/sqlite3.dir/sqlite3.c.o -c /home/share/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.c
 
 thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sqlite3.dir/sqlite3.c.i"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.c > CMakeFiles/sqlite3.dir/sqlite3.c.i
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/share/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.c > CMakeFiles/sqlite3.dir/sqlite3.c.i
 
 thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sqlite3.dir/sqlite3.c.s"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.c -o CMakeFiles/sqlite3.dir/sqlite3.c.s
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/share/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.c -o CMakeFiles/sqlite3.dir/sqlite3.c.s
 
 # Object files for target sqlite3
 sqlite3_OBJECTS = \
@@ -93,19 +93,19 @@ sqlite3_EXTERNAL_OBJECTS =
 thirdparty/SQLiteCpp/sqlite3/libsqlite3.a: thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o
 thirdparty/SQLiteCpp/sqlite3/libsqlite3.a: thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/build.make
 thirdparty/SQLiteCpp/sqlite3/libsqlite3.a: thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libsqlite3.a"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 && $(CMAKE_COMMAND) -P CMakeFiles/sqlite3.dir/cmake_clean_target.cmake
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sqlite3.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libsqlite3.a"
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 && $(CMAKE_COMMAND) -P CMakeFiles/sqlite3.dir/cmake_clean_target.cmake
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sqlite3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/build: thirdparty/SQLiteCpp/sqlite3/libsqlite3.a
 .PHONY : thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/build
 
 thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/clean:
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 && $(CMAKE_COMMAND) -P CMakeFiles/sqlite3.dir/cmake_clean.cmake
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 && $(CMAKE_COMMAND) -P CMakeFiles/sqlite3.dir/cmake_clean.cmake
 .PHONY : thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/clean
 
 thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/depend:
-	cd /home/iveg/chat-forge/server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iveg/chat-forge/server /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/sqlite3 /home/iveg/chat-forge/server/build /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/share/chat-forge/server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/share/chat-forge/server /home/share/chat-forge/server/thirdparty/SQLiteCpp/sqlite3 /home/share/chat-forge/server/build /home/share/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3 /home/share/chat-forge/server/build/thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/depend
 

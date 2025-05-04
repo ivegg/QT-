@@ -69,6 +69,8 @@ void TcpClient::SendMsg(json message)
 
 void TcpClient::onReadyRead()
 {
+
+    qDebug() << "[onReadyRead] called, bytesAvailable:" << this->bytesAvailable();
     buffer.append(this->readAll()); // 将所有可用数据追加到缓冲区
     while (buffer.size() >= 4) // 检查缓冲区是否至少包含4个字节的消息长度
     {
@@ -98,6 +100,7 @@ void TcpClient::onReadyRead()
 
 void TcpClient::CmdParser(json message)
 {
+    qDebug() << "ClientMsgHandler received:" << message;
     json msg(message);
     int cmd = msg["cmd"].toInt();
     qDebug() << "cmd = " << cmd;
@@ -105,7 +108,7 @@ void TcpClient::CmdParser(json message)
     {
         emit CallLogging(msg);
     }
-    if(cmd >= cmd_add_friend_request && cmd <= cmd_group_member_list)
+    if((cmd >= cmd_add_friend_request && cmd <= cmd_group_member_list) || cmd == cmd_get_history)
     {
         emit CallClient(msg);
     }

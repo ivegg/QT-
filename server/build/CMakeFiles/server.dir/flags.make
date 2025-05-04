@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_JSON1
 
-CXX_INCLUDES = -I/home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include -I/home/iveg/chat-forge/server/thirdparty/SQLiteCpp/sqlite3 -I/home/iveg/chat-forge/server/thirdparty/json-develop/include
+CXX_INCLUDES = -I/home/share/chat-forge/server/thirdparty/SQLiteCpp/include -I/home/share/chat-forge/server/thirdparty/SQLiteCpp/sqlite3 -I/home/share/chat-forge/server/thirdparty/json-develop/include
 
-CXX_FLAGS = -g -std=gnu++17
+CXX_FLAGS = -std=gnu++17
 

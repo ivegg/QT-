@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/iveg/chat-forge/server
+CMAKE_SOURCE_DIR = /home/share/chat-forge/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/iveg/chat-forge/server/build
+CMAKE_BINARY_DIR = /home/share/chat-forge/server/build
 
 # Include any dependencies generated for this target.
 include thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/depend.make
@@ -70,102 +70,102 @@ include thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/progress.make
 include thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/flags.make
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/flags.make
-thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o: /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Backup.cpp
+thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o: /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Backup.cpp
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o -c /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Backup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o"
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o -c /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Backup.cpp
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.i"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Backup.cpp > CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.i
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Backup.cpp > CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.i
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.s"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Backup.cpp -o CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.s
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Backup.cpp -o CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.s
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/flags.make
-thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o: /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Column.cpp
+thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o: /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Column.cpp
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o -c /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Column.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o"
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o -c /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Column.cpp
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SQLiteCpp.dir/src/Column.cpp.i"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Column.cpp > CMakeFiles/SQLiteCpp.dir/src/Column.cpp.i
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Column.cpp > CMakeFiles/SQLiteCpp.dir/src/Column.cpp.i
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SQLiteCpp.dir/src/Column.cpp.s"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Column.cpp -o CMakeFiles/SQLiteCpp.dir/src/Column.cpp.s
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Column.cpp -o CMakeFiles/SQLiteCpp.dir/src/Column.cpp.s
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/flags.make
-thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o: /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Database.cpp
+thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o: /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Database.cpp
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o -c /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Database.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o"
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o -c /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Database.cpp
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SQLiteCpp.dir/src/Database.cpp.i"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Database.cpp > CMakeFiles/SQLiteCpp.dir/src/Database.cpp.i
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Database.cpp > CMakeFiles/SQLiteCpp.dir/src/Database.cpp.i
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SQLiteCpp.dir/src/Database.cpp.s"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Database.cpp -o CMakeFiles/SQLiteCpp.dir/src/Database.cpp.s
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Database.cpp -o CMakeFiles/SQLiteCpp.dir/src/Database.cpp.s
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/flags.make
-thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o: /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Exception.cpp
+thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o: /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Exception.cpp
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o -c /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Exception.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o"
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o -c /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Exception.cpp
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.i"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Exception.cpp > CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.i
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Exception.cpp > CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.i
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.s"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Exception.cpp -o CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.s
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Exception.cpp -o CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.s
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/flags.make
-thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o: /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Savepoint.cpp
+thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o: /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Savepoint.cpp
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o -c /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Savepoint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o"
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o -c /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Savepoint.cpp
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.i"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Savepoint.cpp > CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.i
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Savepoint.cpp > CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.i
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.s"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Savepoint.cpp -o CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.s
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Savepoint.cpp -o CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.s
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/flags.make
-thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o: /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Statement.cpp
+thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o: /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Statement.cpp
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o -c /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Statement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o"
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o -c /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Statement.cpp
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.i"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Statement.cpp > CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.i
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Statement.cpp > CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.i
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.s"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Statement.cpp -o CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.s
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Statement.cpp -o CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.s
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/flags.make
-thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o: /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Transaction.cpp
+thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o: /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Transaction.cpp
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o -c /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Transaction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o"
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o -MF CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o.d -o CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o -c /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Transaction.cpp
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.i"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Transaction.cpp > CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.i
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Transaction.cpp > CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.i
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.s"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Transaction.cpp -o CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.s
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Transaction.cpp -o CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.s
 
 # Object files for target SQLiteCpp
 SQLiteCpp_OBJECTS = \
@@ -189,19 +189,19 @@ thirdparty/SQLiteCpp/libSQLiteCpp.a: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.d
 thirdparty/SQLiteCpp/libSQLiteCpp.a: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o
 thirdparty/SQLiteCpp/libSQLiteCpp.a: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make
 thirdparty/SQLiteCpp/libSQLiteCpp.a: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/iveg/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libSQLiteCpp.a"
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && $(CMAKE_COMMAND) -P CMakeFiles/SQLiteCpp.dir/cmake_clean_target.cmake
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SQLiteCpp.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/share/chat-forge/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libSQLiteCpp.a"
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && $(CMAKE_COMMAND) -P CMakeFiles/SQLiteCpp.dir/cmake_clean_target.cmake
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SQLiteCpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build: thirdparty/SQLiteCpp/libSQLiteCpp.a
 .PHONY : thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/clean:
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && $(CMAKE_COMMAND) -P CMakeFiles/SQLiteCpp.dir/cmake_clean.cmake
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && $(CMAKE_COMMAND) -P CMakeFiles/SQLiteCpp.dir/cmake_clean.cmake
 .PHONY : thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/clean
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/depend:
-	cd /home/iveg/chat-forge/server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iveg/chat-forge/server /home/iveg/chat-forge/server/thirdparty/SQLiteCpp /home/iveg/chat-forge/server/build /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/share/chat-forge/server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/share/chat-forge/server /home/share/chat-forge/server/thirdparty/SQLiteCpp /home/share/chat-forge/server/build /home/share/chat-forge/server/build/thirdparty/SQLiteCpp /home/share/chat-forge/server/build/thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/depend
 

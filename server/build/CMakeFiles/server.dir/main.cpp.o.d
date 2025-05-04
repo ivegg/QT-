@@ -1,7 +1,7 @@
-CMakeFiles/server.dir/main.cpp.o: /home/iveg/chat-forge/server/main.cpp \
- /usr/include/stdc-predef.h /home/iveg/chat-forge/server/common.h \
- /home/iveg/chat-forge/server/DeThread.h \
- /home/iveg/chat-forge/server/infos.h /usr/include/c++/11/iostream \
+CMakeFiles/server.dir/main.cpp.o: /home/share/chat-forge/server/main.cpp \
+ /usr/include/stdc-predef.h /home/share/chat-forge/server/common.h \
+ /home/share/chat-forge/server/DeThread.h \
+ /home/share/chat-forge/server/infos.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -194,14 +194,14 @@ CMakeFiles/server.dir/main.cpp.o: /home/iveg/chat-forge/server/main.cpp \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Assertion.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Assertion.h \
  /usr/include/c++/11/cassert \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Exception.h \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Database.h \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Column.h \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Statement.h \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Utils.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Exception.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Database.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Column.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Statement.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Utils.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
@@ -227,8 +227,8 @@ CMakeFiles/server.dir/main.cpp.o: /home/iveg/chat-forge/server/main.cpp \
  /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/codecvt \
  /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Transaction.h \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/json.hpp \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Transaction.h \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/json.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
@@ -245,9 +245,9 @@ CMakeFiles/server.dir/main.cpp.o: /home/iveg/chat-forge/server/main.cpp \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
  /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/c++/11/pstl/glue_numeric_defs.h \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/adl_serializer.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/abi_macros.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/conversions/from_json.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/adl_serializer.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/abi_macros.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/conversions/from_json.hpp \
  /usr/include/c++/11/forward_list /usr/include/c++/11/bits/forward_list.h \
  /usr/include/c++/11/bits/forward_list.tcc /usr/include/c++/11/valarray \
  /usr/include/c++/11/cmath /usr/include/math.h \
@@ -281,48 +281,48 @@ CMakeFiles/server.dir/main.cpp.o: /home/iveg/chat-forge/server/main.cpp \
  /usr/include/c++/11/bits/gslice_array.h \
  /usr/include/c++/11/bits/mask_array.h \
  /usr/include/c++/11/bits/indirect_array.h \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/exceptions.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/value_t.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/macro_scope.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/detected.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/void_t.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/thirdparty/hedley/hedley.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/exceptions.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/value_t.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/macro_scope.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/detected.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/void_t.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/thirdparty/hedley/hedley.hpp \
  /usr/include/c++/11/version \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/string_escape.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/input/position_t.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/cpp_future.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/type_traits.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/iterators/iterator_traits.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/call_std/begin.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/call_std/end.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/json_fwd.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/string_concat.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/string_escape.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/input/position_t.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/cpp_future.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/type_traits.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/iterators/iterator_traits.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/call_std/begin.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/call_std/end.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/json_fwd.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/string_concat.hpp \
  /usr/include/c++/11/cstring \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/identity_tag.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/std_fs.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/conversions/to_json.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/iterators/iteration_proxy.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/byte_container_with_subtype.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/hash.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/input/binary_reader.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/input/input_adapters.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/input/json_sax.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/input/lexer.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/is_sax.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/input/parser.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/iterators/internal_iterator.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/iterators/primitive_iterator.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/iterators/iter_impl.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/json_pointer.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/json_ref.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/output/binary_writer.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/output/output_adapters.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/output/serializer.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/conversions/to_chars.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/ordered_map.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/identity_tag.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/std_fs.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/conversions/to_json.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/byte_container_with_subtype.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/hash.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/input/binary_reader.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/input/input_adapters.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/input/json_sax.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/input/lexer.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/meta/is_sax.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/input/parser.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/iterators/internal_iterator.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/iterators/iter_impl.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/json_pointer.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/json_ref.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/output/binary_writer.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/output/output_adapters.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/output/serializer.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/conversions/to_chars.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/ordered_map.hpp \
  /usr/include/c++/11/any \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/macro_unscope.hpp \
- /home/iveg/chat-forge/server/thirdparty/json-develop/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
- /home/iveg/chat-forge/server/chatTask.h \
- /home/iveg/chat-forge/server/session.h
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/macro_unscope.hpp \
+ /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /home/share/chat-forge/server/chatTask.h \
+ /home/share/chat-forge/server/session.h

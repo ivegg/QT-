@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/iveg/chat-forge/server
+CMAKE_SOURCE_DIR = /home/share/chat-forge/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/iveg/chat-forge/server/build
+CMAKE_BINARY_DIR = /home/share/chat-forge/server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/iveg/chat-forge/server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/iveg/chat-forge/server/build/CMakeFiles /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp//CMakeFiles/progress.marks
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/SQLiteCpp/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/iveg/chat-forge/server/build/CMakeFiles 0
+	cd /home/share/chat-forge/server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/share/chat-forge/server/build/CMakeFiles /home/share/chat-forge/server/build/thirdparty/SQLiteCpp//CMakeFiles/progress.marks
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/SQLiteCpp/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/share/chat-forge/server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/SQLiteCpp/clean
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/SQLiteCpp/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/SQLiteCpp/preinstall
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/SQLiteCpp/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/SQLiteCpp/preinstall
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/SQLiteCpp/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/iveg/chat-forge/server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/share/chat-forge/server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/rule:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/rule
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/rule
 .PHONY : thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ SQLiteCpp: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/rule
 
 # fast build rule for target.
 SQLiteCpp/fast:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build
 .PHONY : SQLiteCpp/fast
 
 # Convenience name for target.
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/rule:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/rule
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/rule
 .PHONY : thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/rule
 
 # Convenience name for target.
@@ -186,7 +186,7 @@ SQLiteCpp_cpplint: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/rule
 
 # fast build rule for target.
 SQLiteCpp_cpplint/fast:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/build
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/build
 .PHONY : SQLiteCpp_cpplint/fast
 
 src/Backup.o: src/Backup.cpp.o
@@ -194,7 +194,7 @@ src/Backup.o: src/Backup.cpp.o
 
 # target to build an object file
 src/Backup.cpp.o:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o
 .PHONY : src/Backup.cpp.o
 
 src/Backup.i: src/Backup.cpp.i
@@ -202,7 +202,7 @@ src/Backup.i: src/Backup.cpp.i
 
 # target to preprocess a source file
 src/Backup.cpp.i:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.i
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.i
 .PHONY : src/Backup.cpp.i
 
 src/Backup.s: src/Backup.cpp.s
@@ -210,7 +210,7 @@ src/Backup.s: src/Backup.cpp.s
 
 # target to generate assembly for a file
 src/Backup.cpp.s:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.s
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.s
 .PHONY : src/Backup.cpp.s
 
 src/Column.o: src/Column.cpp.o
@@ -218,7 +218,7 @@ src/Column.o: src/Column.cpp.o
 
 # target to build an object file
 src/Column.cpp.o:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o
 .PHONY : src/Column.cpp.o
 
 src/Column.i: src/Column.cpp.i
@@ -226,7 +226,7 @@ src/Column.i: src/Column.cpp.i
 
 # target to preprocess a source file
 src/Column.cpp.i:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.i
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.i
 .PHONY : src/Column.cpp.i
 
 src/Column.s: src/Column.cpp.s
@@ -234,7 +234,7 @@ src/Column.s: src/Column.cpp.s
 
 # target to generate assembly for a file
 src/Column.cpp.s:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.s
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.s
 .PHONY : src/Column.cpp.s
 
 src/Database.o: src/Database.cpp.o
@@ -242,7 +242,7 @@ src/Database.o: src/Database.cpp.o
 
 # target to build an object file
 src/Database.cpp.o:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o
 .PHONY : src/Database.cpp.o
 
 src/Database.i: src/Database.cpp.i
@@ -250,7 +250,7 @@ src/Database.i: src/Database.cpp.i
 
 # target to preprocess a source file
 src/Database.cpp.i:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.i
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.i
 .PHONY : src/Database.cpp.i
 
 src/Database.s: src/Database.cpp.s
@@ -258,7 +258,7 @@ src/Database.s: src/Database.cpp.s
 
 # target to generate assembly for a file
 src/Database.cpp.s:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.s
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.s
 .PHONY : src/Database.cpp.s
 
 src/Exception.o: src/Exception.cpp.o
@@ -266,7 +266,7 @@ src/Exception.o: src/Exception.cpp.o
 
 # target to build an object file
 src/Exception.cpp.o:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o
 .PHONY : src/Exception.cpp.o
 
 src/Exception.i: src/Exception.cpp.i
@@ -274,7 +274,7 @@ src/Exception.i: src/Exception.cpp.i
 
 # target to preprocess a source file
 src/Exception.cpp.i:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.i
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.i
 .PHONY : src/Exception.cpp.i
 
 src/Exception.s: src/Exception.cpp.s
@@ -282,7 +282,7 @@ src/Exception.s: src/Exception.cpp.s
 
 # target to generate assembly for a file
 src/Exception.cpp.s:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.s
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.s
 .PHONY : src/Exception.cpp.s
 
 src/Savepoint.o: src/Savepoint.cpp.o
@@ -290,7 +290,7 @@ src/Savepoint.o: src/Savepoint.cpp.o
 
 # target to build an object file
 src/Savepoint.cpp.o:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o
 .PHONY : src/Savepoint.cpp.o
 
 src/Savepoint.i: src/Savepoint.cpp.i
@@ -298,7 +298,7 @@ src/Savepoint.i: src/Savepoint.cpp.i
 
 # target to preprocess a source file
 src/Savepoint.cpp.i:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.i
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.i
 .PHONY : src/Savepoint.cpp.i
 
 src/Savepoint.s: src/Savepoint.cpp.s
@@ -306,7 +306,7 @@ src/Savepoint.s: src/Savepoint.cpp.s
 
 # target to generate assembly for a file
 src/Savepoint.cpp.s:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.s
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.s
 .PHONY : src/Savepoint.cpp.s
 
 src/Statement.o: src/Statement.cpp.o
@@ -314,7 +314,7 @@ src/Statement.o: src/Statement.cpp.o
 
 # target to build an object file
 src/Statement.cpp.o:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o
 .PHONY : src/Statement.cpp.o
 
 src/Statement.i: src/Statement.cpp.i
@@ -322,7 +322,7 @@ src/Statement.i: src/Statement.cpp.i
 
 # target to preprocess a source file
 src/Statement.cpp.i:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.i
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.i
 .PHONY : src/Statement.cpp.i
 
 src/Statement.s: src/Statement.cpp.s
@@ -330,7 +330,7 @@ src/Statement.s: src/Statement.cpp.s
 
 # target to generate assembly for a file
 src/Statement.cpp.s:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.s
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.s
 .PHONY : src/Statement.cpp.s
 
 src/Transaction.o: src/Transaction.cpp.o
@@ -338,7 +338,7 @@ src/Transaction.o: src/Transaction.cpp.o
 
 # target to build an object file
 src/Transaction.cpp.o:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o
 .PHONY : src/Transaction.cpp.o
 
 src/Transaction.i: src/Transaction.cpp.i
@@ -346,7 +346,7 @@ src/Transaction.i: src/Transaction.cpp.i
 
 # target to preprocess a source file
 src/Transaction.cpp.i:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.i
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.i
 .PHONY : src/Transaction.cpp.i
 
 src/Transaction.s: src/Transaction.cpp.s
@@ -354,7 +354,7 @@ src/Transaction.s: src/Transaction.cpp.s
 
 # target to generate assembly for a file
 src/Transaction.cpp.s:
-	cd /home/iveg/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.s
+	cd /home/share/chat-forge/server/build && $(MAKE) $(MAKESILENT) -f thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.s
 .PHONY : src/Transaction.cpp.s
 
 # Help Target
@@ -403,6 +403,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/iveg/chat-forge/server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/share/chat-forge/server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

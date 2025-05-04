@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/iveg/chat-forge/server
+CMAKE_SOURCE_DIR = /home/share/chat-forge/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/iveg/chat-forge/server/build
+CMAKE_BINARY_DIR = /home/share/chat-forge/server/build
 
 # Utility rule file for SQLiteCpp_cpplint.
 
@@ -67,7 +67,7 @@ include thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/compiler_depend.ma
 include thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/progress.make
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint:
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/python3.10 /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/cpplint.py --output=eclipse --verbose=3 --linelength=120 /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Backup.cpp /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Column.cpp /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Database.cpp /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Exception.cpp /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Savepoint.cpp /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Statement.cpp /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Transaction.cpp /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Assertion.h /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Backup.h /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Column.h /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Database.h /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Exception.h /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Savepoint.h /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Statement.h /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Transaction.h /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/VariadicBind.h /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/ExecuteMany.h
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && /usr/bin/python3.10 /home/share/chat-forge/server/thirdparty/SQLiteCpp/cpplint.py --output=eclipse --verbose=3 --linelength=120 /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Backup.cpp /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Column.cpp /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Database.cpp /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Exception.cpp /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Savepoint.cpp /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Statement.cpp /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Transaction.cpp /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Assertion.h /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Backup.h /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Column.h /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Database.h /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Exception.h /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Savepoint.h /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Statement.h /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Transaction.h /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/VariadicBind.h /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/ExecuteMany.h
 
 SQLiteCpp_cpplint: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint
 SQLiteCpp_cpplint: thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/build.make
@@ -78,10 +78,10 @@ thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/build: SQLiteCpp_cpplint
 .PHONY : thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/build
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/clean:
-	cd /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp && $(CMAKE_COMMAND) -P CMakeFiles/SQLiteCpp_cpplint.dir/cmake_clean.cmake
+	cd /home/share/chat-forge/server/build/thirdparty/SQLiteCpp && $(CMAKE_COMMAND) -P CMakeFiles/SQLiteCpp_cpplint.dir/cmake_clean.cmake
 .PHONY : thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/clean
 
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/depend:
-	cd /home/iveg/chat-forge/server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iveg/chat-forge/server /home/iveg/chat-forge/server/thirdparty/SQLiteCpp /home/iveg/chat-forge/server/build /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp /home/iveg/chat-forge/server/build/thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/share/chat-forge/server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/share/chat-forge/server /home/share/chat-forge/server/thirdparty/SQLiteCpp /home/share/chat-forge/server/build /home/share/chat-forge/server/build/thirdparty/SQLiteCpp /home/share/chat-forge/server/build/thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp_cpplint.dir/depend
 

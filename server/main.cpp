@@ -12,6 +12,8 @@ map<int,int> userMap;
 int main(int argc,char* argv[])
 {
     //db->open("user.db");
+
+    printf("=== SERVER STARTED ===\n");
     
     // 执行建表命令
 	db.exec("CREATE TABLE IF NOT EXISTS friend (user1 INTEGER NOT NULL, user2 INTEGER NOT NULL, PRIMARY KEY (user1, user2));");

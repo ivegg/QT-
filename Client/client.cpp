@@ -126,8 +126,6 @@ void Client::InitLayout()
     chatSplitter->setHandleWidth(5);
     chatSplitter->addWidget(ui->widget_2);
     chatSplitter->addWidget(ui->widget_chatWindow);
-    chatSplitter->addWidget(ui->widget_4);
-    chatSplitter->addWidget(ui->widget_send);
     chatSplitter->addWidget(ui->widget_3);
 
     mainSplitter->addWidget(chatSplitter);
@@ -276,6 +274,7 @@ void Client::on_pushBtn_refresh_clicked()
 // 处理服务器返回的各种消息
 void Client::ClientMsgHandler(json msg)
 {
+    qDebug() << "ClientMsgHandler received:" << msg;
     int cmd = msg["cmd"].toInt();
     switch(cmd) {
     case cmd_add_friend_request:
@@ -538,7 +537,59 @@ void Client::ClientMsgHandler(json msg)
         }
         break;
     }
-
+    case cmd_get_history: {
+        qDebug() << "收到历史消息:" << msg;
+        int type = msg["type"].toInt();
+        QJsonArray history = msg["history"].toArray();
+        if (type == 0) { // 私聊
+            if(history.isEmpty()) break;
+            int peer_id = -1;
+            // 取第一条消息的对方id
+            QJsonObject firstMsg = history.first().toObject();
+            int sender_id = firstMsg["sender_id"].toInt();
+            int receiver_id = firstMsg["receiver_id"].toInt();
+            peer_id = (sender_id == selfInfo.account) ? receiver_id : sender_id;
+            if (peer_id == -1) break;
+            ChatWindow* chatWindow = chatMap.value(peer_id, nullptr);
+            qDebug() << "peer_id:" << peer_id << "chatWindow:" << chatWindow;
+            if (!chatWindow) break;
+            for (const QJsonValue& v : history) {
+                QJsonObject m = v.toObject();
+                int sender_id = m["sender_id"].toInt();
+                QString content = m["content"].toString();
+                int msg_type = m["msg_type"].toInt();
+                QString send_time = m["send_time"].toString();
+                chatWindow->pushMsg(send_time, sender_id == selfInfo.account ? 0 : 1);
+                if (msg_type == TextOnly) {
+                    chatWindow->sendMessage(content, sender_id == selfInfo.account ? 0 : 1);
+                } else if (msg_type == ImageOnly) {
+                    chatWindow->sendImages(StringTool::GetImagesFromHtml(content), sender_id == selfInfo.account ? 0 : 1);
+                } else if (msg_type == MixedContent) {
+                    chatWindow->sendContentFromInput(content, sender_id == selfInfo.account ? 0 : 1);
+                }
+            }
+        } else if (type == 1) { // 群聊
+            int group_id = msg["group_id"].toInt();
+            ChatWindow* chatWindow = groupChatMap.value(group_id, nullptr);
+            if (!chatWindow) break;
+            for (const QJsonValue& v : history) {
+                QJsonObject m = v.toObject();
+                int sender_id = m["sender_id"].toInt();
+                QString content = m["content"].toString();
+                int msg_type = m["msg_type"].toInt();
+                QString send_time = m["send_time"].toString();
+                chatWindow->pushMsg(send_time, sender_id == selfInfo.account ? 0 : 1);
+                if (msg_type == TextOnly) {
+                    chatWindow->sendMessage(content, sender_id == selfInfo.account ? 0 : 1);
+                } else if (msg_type == ImageOnly) {
+                    chatWindow->sendImages(StringTool::GetImagesFromHtml(content), sender_id == selfInfo.account ? 0 : 1);
+                } else if (msg_type == MixedContent) {
+                    chatWindow->sendContentFromInput(content, sender_id == selfInfo.account ? 0 : 1);
+                }
+            }
+        }
+        break;
+    }
     default:
         break;
     }
@@ -737,6 +788,13 @@ void Client::SetChatWindow(FriendItem *item) {
             ui->stackedWidget->setCurrentWidget(chatMap.value(account));
         }
         curChatType = 1;
+        // 自动拉取私聊历史
+        json msg;
+        msg["cmd"] = cmd_get_history;
+        msg["type"] = 0;
+        msg["user_id"] = selfInfo.account;
+        msg["peer_id"] = account;
+        t->SendMsg(msg);
     }
     else
     {
@@ -751,6 +809,12 @@ void Client::SetChatWindow(FriendItem *item) {
             ui->stackedWidget->setCurrentWidget(groupChatMap.value(account));
         }
         curChatType = 2;
+        // 自动拉取群聊历史
+        json msg;
+        msg["cmd"] = cmd_get_history;
+        msg["type"] = 1;
+        msg["group_id"] = account;
+        t->SendMsg(msg);
     }
     item->SetNewMsgNum(0);
     curChatAccount = account;

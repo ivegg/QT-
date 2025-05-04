@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/iveg/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.c" "thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o" "gcc" "thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o.d"
+  "/home/share/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.c" "thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o" "gcc" "thirdparty/SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o.d"
   )
 
 # Targets to which this target links.

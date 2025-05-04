@@ -1,7 +1,7 @@
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o: \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Exception.cpp \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Exception.cpp \
  /usr/include/stdc-predef.h \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Exception.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Exception.h \
  /usr/include/c++/11/stdexcept /usr/include/c++/11/exception \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -134,4 +134,4 @@ thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.h
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.h

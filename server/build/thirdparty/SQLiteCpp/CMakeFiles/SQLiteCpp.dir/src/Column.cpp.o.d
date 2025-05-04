@@ -1,9 +1,9 @@
 thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o: \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/src/Column.cpp \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/src/Column.cpp \
  /usr/include/stdc-predef.h \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Column.h \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Statement.h \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Exception.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Column.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Statement.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Exception.h \
  /usr/include/c++/11/stdexcept /usr/include/c++/11/exception \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -136,7 +136,7 @@ thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Utils.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Utils.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/node_handle.h \
@@ -161,7 +161,7 @@ thirdparty/SQLiteCpp/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/iveg/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.h \
+ /home/share/chat-forge/server/thirdparty/SQLiteCpp/sqlite3/sqlite3.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/bits/ios_base.h \
  /usr/include/c++/11/bits/locale_classes.h \
