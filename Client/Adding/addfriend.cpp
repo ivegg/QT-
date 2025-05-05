@@ -95,6 +95,14 @@ void AddFriend::CmdHandler(json msg)
         }
     }
 
+    if (cmd == cmd_group_create) {
+        QString res = msg["res"].toString();
+        if (res == "yes") {
+            QMessageBox* box = new QMessageBox(QMessageBox::Information, "提示", "群聊创建成功！", QMessageBox::Ok, this);
+            connect(box, &QMessageBox::accepted, this, &AddFriend::close);
+            box->exec();
+        }
+    }
 }
 
 // 新增：创建群聊按钮槽函数

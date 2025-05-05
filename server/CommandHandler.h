@@ -15,6 +15,8 @@ public:
     static void GroupList(int account, Session* session);
     static void GroupJoinReguest(UserInfo info,int group_account,std::string group_name,std::string sendmsg,Session* session);
 
+    static void GroupCreate(int account, const std::string& groupName, const std::vector<int>& members, Session* session);
+
     //static void PChat(int account,std::string sendmsg,Session* session);
     static void GroupChat(int account,std::string sendmsg,int group_account ,Session* session);
     static void GroupMemberList(int account,Session* session);

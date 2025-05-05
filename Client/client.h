@@ -76,6 +76,8 @@ private slots:
 
     void on_pushButton_image_clicked();
 
+    void on_pushButton_file_clicked();
+
 public slots:
     void on_pushButton_addFriend_clicked();
     void on_pushBtn_refresh_clicked();

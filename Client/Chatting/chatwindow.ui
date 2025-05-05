@@ -18,7 +18,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <widget class="SendTextEdit" name="textEdit">
+    <widget class="QTextBrowser" name="textEdit">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -43,7 +43,7 @@ QScrollBar::handle:vertical:focus {
 </string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
+      <enum>QFrame::Shape::NoFrame</enum>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -52,13 +52,6 @@ QScrollBar::handle:vertical:focus {
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>SendTextEdit</class>
-   <extends>QTextEdit</extends>
-   <header location="global">sendtextedit.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

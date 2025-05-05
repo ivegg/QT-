@@ -94,7 +94,6 @@ int main(int argc,char* argv[])
             return 0;
         }
         LOGINFO("Connect from %s:%u...\n", inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
-        userMap[connect_fd] = connect_fd;
         threadPool.emplace_back(taskThread, connect_fd);
     }
     close(listen_fd);

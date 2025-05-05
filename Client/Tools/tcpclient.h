@@ -39,7 +39,8 @@ enum commands{
     cmd_group_member_add,
     cmd_group_member_del,
     cmd_set_icon,
-    cmd_get_history
+    cmd_get_history,
+    cmd_file_transfer
 };
 
 enum ContentType { TextOnly, ImageOnly, MixedContent };

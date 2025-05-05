@@ -5,6 +5,8 @@ using json = nlohmann::json;
 // extern SearchResult accountResult;
 using namespace std;
 
+std::string getCurrentTimeString();
+
 void CommandHandler::Regist(int account, string password, string name, Session *session)
 {
     json msg;
@@ -285,5 +287,52 @@ void CommandHandler::GroupJoinReguest(UserInfo info, int group_account, std::str
         msg["sig"] = info.sig;
         msg["icon"] = info.icon;
         session->sendMsg(fd, msg);
+    }
+}
+
+void CommandHandler::GroupCreate(int account, const std::string& groupName, const std::vector<int>& members, Session* session) {
+    json resp;
+    resp["cmd"] = cmd_group_create;
+    try {
+        // 生成唯一 group_account（用当前时间戳+账号，简单实现）
+        int group_account = static_cast<int>(time(nullptr)) + account;
+        std::string now = getCurrentTimeString();
+        Statement stmt1(db, "INSERT INTO group_table (group_account, group_name, create_time, group_master) VALUES (?, ?, ?, ?)");
+        stmt1.bind(1, group_account);
+        stmt1.bind(2, groupName);
+        stmt1.bind(3, now);
+        stmt1.bind(4, account);
+        stmt1.exec();
+        // 插入成员
+        for (int member : members) {
+            // 查询用户昵称
+            std::string nickname = "";
+            try {
+                Statement nameQuery(db, "SELECT name FROM user WHERE account=?");
+                nameQuery.bind(1, member);
+                if (nameQuery.executeStep()) {
+                    nickname = nameQuery.getColumn(0).getString();
+                }
+            } catch (...) {}
+            Statement stmt2(db, "INSERT INTO member (member_id, group_account, group_nickname) VALUES (?, ?, ?)");
+            stmt2.bind(1, member);
+            stmt2.bind(2, group_account);
+            stmt2.bind(3, nickname); // 写入昵称
+            stmt2.exec();
+        }
+        resp["res"] = "yes";
+        resp["group_account"] = group_account;
+        session->sendMsg(resp);
+
+        // 通知所有成员刷新群组列表（如果在线）
+        for (int member : members) {
+            int fd = session->getFriendFd(member);
+            if (fd > 0) {
+                CommandHandler::GroupList(member, session);
+            }
+        }
+    } catch (std::exception& e) {
+        resp["res"] = "no";
+        resp["err"] = e.what();
     }
 }

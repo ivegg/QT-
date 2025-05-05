@@ -19,6 +19,8 @@
 #include "IconSetting/iconselect.h" // 头像选择窗口
 #include <QTimer> // 定时器
 #include <QSizePolicy> // 尺寸策略
+#include <QPushButton> // 添加 QPushButton 头文件
+#include <QMessageBox> // 添加 QMessageBox 头文件
 
 // 构造函数，初始化主界面和各个控件
 Client::Client(SelfInfo info ,TcpClient* tcp,QWidget *parent)
@@ -50,6 +52,7 @@ Client::Client(SelfInfo info ,TcpClient* tcp,QWidget *parent)
     });
     // 群组列表双击
     connect(groupsListWidget,&ChatListWidget::itemDoubleClicked,this,&Client::on_groupsListWidget_itemClicked);
+    connect(ui->pushButton_file, &QPushButton::clicked, this, &Client::on_pushButton_file_clicked);
     ui->pushBtn_refresh->setVisible(false); // 隐藏刷新按钮
     ui->stackedWidget_list->addWidget(messagesListWidget);
     ui->stackedWidget_list->addWidget(friendsListWidget);
@@ -537,6 +540,30 @@ void Client::ClientMsgHandler(json msg)
         }
         break;
     }
+    case cmd_file_transfer: {
+        QString fileName = msg["file_name"].toString();
+        QString fileData = msg["file_data"].toString();
+        int sender_id = msg["sender"].toInt();
+        if (msg.contains("is_group") && msg["is_group"].toInt() == 1) {
+            int group_id = msg["account"].toInt();
+            ChatWindow* chatWindow = groupChatMap.value(group_id, nullptr);
+            if (!chatWindow) break;
+            chatWindow->addFileMessage(fileName, fileData, false);
+        } else {
+            ChatWindow* chatWindow = chatMap.value(sender_id, nullptr);
+            if (!chatWindow) {
+                if (friendMap.contains(sender_id)) {
+                    chatWindow = new ChatWindow(friendMap[sender_id]);
+                    ui->stackedWidget->addWidget(chatWindow);
+                    chatMap.insert(sender_id, chatWindow);
+                } else {
+                    break;
+                }
+            }
+            chatWindow->addFileMessage(fileName, fileData, false);
+        }
+        break;
+    }
     case cmd_get_history: {
         qDebug() << "收到历史消息:" << msg;
         int type = msg["type"].toInt();
@@ -570,7 +597,9 @@ void Client::ClientMsgHandler(json msg)
             }
         } else if (type == 1) { // 群聊
             int group_id = msg["group_id"].toInt();
+            qDebug() << "[历史消息响应] group_id=" << group_id;
             ChatWindow* chatWindow = groupChatMap.value(group_id, nullptr);
+            qDebug() << "[历史消息] groupChatMap group_id=" << group_id << "窗口指针:" << chatWindow;
             if (!chatWindow) break;
             for (const QJsonValue& v : history) {
                 QJsonObject m = v.toObject();
@@ -578,7 +607,18 @@ void Client::ClientMsgHandler(json msg)
                 QString content = m["content"].toString();
                 int msg_type = m["msg_type"].toInt();
                 QString send_time = m["send_time"].toString();
-                chatWindow->pushMsg(send_time, sender_id == selfInfo.account ? 0 : 1);
+                // 查找 sender_id 对应的名字
+                QString senderName;
+                for (const MemberInfo& member : groupMap[group_id].memberList) {
+                    if (member.account == sender_id) {
+                        senderName = member.name;
+                        break;
+                    }
+                }
+                if (senderName.isEmpty()) senderName = QString::number(sender_id);
+                // 在 pushMsg 里加上名字
+                QString msgWithName = senderName + ": " + send_time;
+                chatWindow->pushMsg(msgWithName, sender_id == selfInfo.account ? 0 : 1);
                 if (msg_type == TextOnly) {
                     chatWindow->sendMessage(content, sender_id == selfInfo.account ? 0 : 1);
                 } else if (msg_type == ImageOnly) {
@@ -587,6 +627,18 @@ void Client::ClientMsgHandler(json msg)
                     chatWindow->sendContentFromInput(content, sender_id == selfInfo.account ? 0 : 1);
                 }
             }
+        }
+        break;
+    }
+    case cmd_group_create:
+    {
+        QString res = msg["res"].toString();
+        if(res == "yes") {
+            QMessageBox::information(this, "提示", "群聊创建成功！");
+            RefreshGroupList();
+        } else {
+            QString err = msg["err"].toString();
+            QMessageBox::warning(this, "错误", "群聊创建失败：" + err);
         }
         break;
     }
@@ -618,8 +670,9 @@ void Client::on_listWidget_info_itemClicked(QListWidgetItem *item)
 void Client::on_groupsListWidget_itemClicked(QListWidgetItem *item)
 {
     FriendItem* friendItem = qobject_cast<FriendItem*>(groupsListWidget->itemWidget(item));
-    SetChatWindow(friendItem);
     int account = friendItem->account();
+    qDebug() << "[群聊点击] account=" << account;
+    SetChatWindow(friendItem);
     QString groupKey = QString("g_%1").arg(account);
     if(messageItemMap.find(groupKey) == messageItemMap.end())
     {
@@ -634,6 +687,13 @@ void Client::on_groupsListWidget_itemClicked(QListWidgetItem *item)
 
         messageItemMap.insert(groupKey, msgItem);
     }
+    // 新增：点击时请求群聊历史消息
+    json msg;
+    msg["cmd"] = cmd_get_history;
+    msg["type"] = 1;
+    msg["group_id"] = account;
+    qDebug() << "[群聊历史请求] group_id=" << account;
+    t->SendMsg(msg);
 }
 
 void Client::on_pushBtn_send_clicked()
@@ -913,4 +973,41 @@ void Client::on_pushButton_image_clicked()
     // Insert image into QTextEdit as HTML
     ui->textEdit_send->insertHtml("<img src='data:image/png;base64," + base64Image + "' />");
     ui->textEdit_send->setFocus();
+}
+
+void Client::on_pushButton_file_clicked()
+{
+    QString filePath = QFileDialog::getOpenFileName(this, tr("选择要发送的文件"), "", tr("所有文件 (*.*)"));
+    if (filePath.isEmpty())
+        return;
+
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly)) {
+        QMessageBox::warning(this, "错误", "无法打开文件");
+        return;
+    }
+    QByteArray fileData = file.readAll();
+    file.close();
+
+    QFileInfo fileInfo(filePath);
+    QString fileName = fileInfo.fileName();
+
+    json msg;
+    msg["cmd"] = cmd_file_transfer; // 你需要在协议里定义这个命令号
+    msg["account"] = curChatAccount; // 对方账号
+    msg["sender"] = selfInfo.account;
+    msg["file_name"] = fileName;
+    msg["file_size"] = fileData.size();
+    msg["file_data"] = QString(fileData.toBase64()); // base64编码
+    msg["timestamp"] = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
+    if (curChatType == 2) msg["is_group"] = 1;
+    t->SendMsg(msg);
+
+    // TODO: 在自己窗口显示"已发送文件"
+    if (chatMap.contains(curChatAccount)) {
+        ChatWindow* chatWindow = chatMap.value(curChatAccount);
+        if (chatWindow) {
+            chatWindow->addFileMessage(fileName, QString(fileData.toBase64()), true);
+        }
+    }
 }

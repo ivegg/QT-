@@ -162,9 +162,13 @@ int Session::handleMsg(json msg)
         
         case cmd_group_create:
         {
-            string account = msg.at("account");
-            string groupname = msg.at("groupName");
-            //CommandHandler::GroupCreate(stoi(account), groupname, this);
+            int account = msg.at("account");
+            std::string groupname = msg.at("groupName");
+            std::vector<int> members;
+            for (auto& m : msg.at("members")) {
+                members.push_back(m);
+            }
+            CommandHandler::GroupCreate(account, groupname, members, this);
             break;
         }
         
@@ -280,6 +284,31 @@ int Session::handleMsg(json msg)
             query.exec();
             break;
         }
+        case cmd_file_transfer:
+        {
+            int sender_id = msg.at("sender");
+            int receiver_id = msg.at("account");
+            int is_group = msg.value("is_group", 0);
+            if (is_group == 1) {
+                // 群聊：转发给所有群成员（除自己）
+                vector<int> member_ids = getGroupMember(receiver_id);
+                vector<int> fds = getFriendFd(member_ids);
+                int selfFd = GetSocket();
+                auto it = find(fds.begin(), fds.end(), selfFd);
+                if (it != fds.end()) fds.erase(it);
+                sendMsg(fds, msg);
+            } else {
+                // 单聊
+                int fd = getFriendFd(receiver_id);
+                printf("[DEBUG] file_transfer: sender=%d, receiver=%d, fd=%d\n", sender_id, receiver_id, fd);
+                if (fd > 0) {
+                    sendMsg(fd, msg);
+                    printf("[DEBUG] file_transfer: sendMsg called\n");
+                }
+                printf("[DEBUG] file_transfer: receiver_id=%d, fd=%d\n", receiver_id, fd);
+            }
+            break;
+        }
         case cmd_get_history:
         {
             int type = msg.at("type"); // 0=私聊, 1=群聊
@@ -308,6 +337,7 @@ int Session::handleMsg(json msg)
                 resp["history"] = history;
             } else if (type == 1) { // 群聊
                 int group_id = msg.at("group_id");
+                resp["group_id"] = group_id;
                 Statement stmt(db, "SELECT sender_id, content, msg_type, send_time FROM message WHERE group_id=? AND is_group=1 ORDER BY send_time ASC");
                 stmt.bind(1, group_id);
                 json history = json::array();

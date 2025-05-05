@@ -33,6 +33,11 @@ public:
     void sendFile(const QString &fileName, const QString &filePath,int flag = 0);
     void sendContentFromInput(const QString &htmlContent, int flag);
 
+    void addFileMessage(const QString& fileName, const QString& fileDataBase64, bool isSender);
+
+private slots:
+    void onFileAnchorClicked(const QUrl &url);
+
 private:
     Ui::ChatWindow *ui;
     int m_account;

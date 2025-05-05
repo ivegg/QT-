@@ -108,7 +108,7 @@ void TcpClient::CmdParser(json message)
     {
         emit CallLogging(msg);
     }
-    if((cmd >= cmd_add_friend_request && cmd <= cmd_group_member_list) || cmd == cmd_get_history)
+    if((cmd >= cmd_add_friend_request && cmd <= cmd_group_member_list) || cmd == cmd_get_history || cmd == cmd_file_transfer)
     {
         emit CallClient(msg);
     }

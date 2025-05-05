@@ -4,6 +4,9 @@
 #include <QBuffer>
 #include <QImageReader>
 #include "stringtool.h"
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QUrl>
 
 ChatWindow::ChatWindow(const FriendInfo& info,QWidget *parent) :
     QWidget(parent),
@@ -19,6 +22,8 @@ ChatWindow::ChatWindow(const FriendInfo& info,QWidget *parent) :
     QFont defaultFont = ui->textEdit->font();
     defaultFont.setPointSize(13); // 设置字体大小，根据您的需要调整大小
     ui->textEdit->setFont(defaultFont);
+    connect(ui->textEdit, &QTextBrowser::anchorClicked, this, &ChatWindow::onFileAnchorClicked);
+    ui->textEdit->setOpenLinks(false);
 }
 
 ChatWindow::ChatWindow(const GroupInfo& info, QWidget *parent):
@@ -31,6 +36,8 @@ ChatWindow::ChatWindow(const GroupInfo& info, QWidget *parent):
     m_account = info.groupAccount;
     m_name = info.groupName;
     //ui->textEdit->setPlainText(QString("System :  you are chatting with %1\n").arg(m_info->name));
+    connect(ui->textEdit, &QTextBrowser::anchorClicked, this, &ChatWindow::onFileAnchorClicked);
+    ui->textEdit->setOpenLinks(false);
 }
 
 ChatWindow::~ChatWindow()
@@ -61,7 +68,6 @@ void ChatWindow::pushMsg(const QString& msg, int flag)
 
     cursor.setBlockFormat(blockFormat);
     cursor.insertText(msg,blueFormat);
-    ui->textEdit->append("");
     QScrollBar*bar = ui->textEdit->verticalScrollBar();
     bar->setValue(bar->maximum());
 }
@@ -82,8 +88,7 @@ void ChatWindow::sendMessage(const QString &text, int flag) {
                              "<tr>"
                              "<td style='border-radius: 20px; padding: 6px;'>%2</td>"
                              "</tr>"
-                             "</table>"
-                             "<br>")
+                             "</table>")
             .arg(alignment, processedText);
 
     textBrowser->insertHtml(bubble);
@@ -212,4 +217,45 @@ void ChatWindow::sendContentFromInput(const QString& htmlContent, int flag) {
 
     textBrowser->verticalScrollBar()->setValue(textBrowser->verticalScrollBar()->maximum()); // 自动滚动到底部
     qDebug() << "send content from input";
+}
+
+void ChatWindow::addFileMessage(const QString& fileName, const QString& fileDataBase64, bool isSender)
+{
+    // 构造 filedata:filename:base64 超链接
+    QString html = QString("<a href=\"filedata:%1:%2\">📎%1</a>")
+                       .arg(fileName)
+                       .arg(fileDataBase64);
+
+    if (isSender)
+        html = QString("<div style='color:green;'>我发送了文件: %1</div>").arg(html);
+    else
+        html = QString("<div style='color:blue;'>对方发送了文件: %1</div>").arg(html);
+
+    ui->textEdit->append(html);
+    ui->textEdit->append("<br>");
+}
+
+void ChatWindow::onFileAnchorClicked(const QUrl &url)
+{
+    if (url.scheme() == "filedata") {
+        QString urlStr = url.toString(); // filedata:filename:base64
+        QStringList parts = urlStr.split(":");
+        if (parts.size() >= 3) {
+            QString fileName = parts[1];
+            // 由于 base64 可能包含冒号，重新拼接
+            QString fileDataBase64 = parts.mid(2).join(":");
+            QString savePath = QFileDialog::getSaveFileName(this, "保存文件", fileName);
+            if (!savePath.isEmpty()) {
+                QFile outFile(savePath);
+                if (outFile.open(QIODevice::WriteOnly)) {
+                    QByteArray fileData = QByteArray::fromBase64(fileDataBase64.toUtf8());
+                    outFile.write(fileData);
+                    outFile.close();
+                    QMessageBox::information(this, "保存成功", "文件已保存到: " + savePath);
+                } else {
+                    QMessageBox::warning(this, "保存失败", "无法保存文件");
+                }
+            }
+        }
+    }
 }
