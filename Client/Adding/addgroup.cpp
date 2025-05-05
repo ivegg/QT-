@@ -105,6 +105,6 @@ void AddGroup::onCreateClicked()
 
     tcp->SendMsg(msg);
 
-    QMessageBox::information(this, "提示", "群聊创建请求已发送！");
+    // 删除提示框，只关闭窗口
     this->close();
 }

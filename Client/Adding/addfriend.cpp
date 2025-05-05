@@ -19,6 +19,8 @@ AddFriend::AddFriend(SelfInfo _info,TcpClient* fd,QWidget *parent) :
      connect(ui->radioButton_friend,&QRadioButton::toggled,this,&AddFriend::on_radioButton_toggled);
 
      connect(ui->pushButton_create, &QPushButton::clicked, this, &AddFriend::on_pushButton_create_clicked);
+    // 新增：设置关闭时自动销毁
+    this->setAttribute(Qt::WA_DeleteOnClose, true);
 }
 
 AddFriend::~AddFriend()
@@ -98,9 +100,9 @@ void AddFriend::CmdHandler(json msg)
     if (cmd == cmd_group_create) {
         QString res = msg["res"].toString();
         if (res == "yes") {
-            QMessageBox* box = new QMessageBox(QMessageBox::Information, "提示", "群聊创建成功！", QMessageBox::Ok, this);
-            connect(box, &QMessageBox::accepted, this, &AddFriend::close);
-            box->exec();
+            QMessageBox::information(this, "提示", "群聊创建成功！");
+            this->hide();
+            this->deleteLater();
         }
     }
 }
@@ -117,4 +119,6 @@ void AddFriend::on_pushButton_create_clicked()
     addGroupWin->setAttribute(Qt::WA_DeleteOnClose);
     connect(addGroupWin, &AddGroup::destroyed, [this]() { addGroupWin = nullptr; });
     addGroupWin->show();
+    // 新增：点击创建后立即关闭查找窗口
+    this->close();
 }
