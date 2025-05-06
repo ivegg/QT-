@@ -28,6 +28,7 @@ FriendItem::FriendItem(GroupInfo _info, QWidget *parent) :
     m_type = 1;
     m_account = _info.groupAccount;
     m_name = _info.groupName;
+    ui->label_sig->hide();
     Init();
 
 }
@@ -104,6 +105,7 @@ void FriendItem::SetInfo(FriendInfo _info)
     m_account = _info.account;
     ui->label_sig->setText(info.sig);
     ui->label_name->setText(info.name);
+    ui->label_sig->show();
 }
 
 void FriendItem::SetInfo(GroupInfo _info)
@@ -111,6 +113,7 @@ void FriendItem::SetInfo(GroupInfo _info)
     groupInfo = _info;
     m_account = _info.groupAccount;
     ui->label_name->setText(groupInfo.groupName);
+    ui->label_sig->hide();
 }
 
 QString FriendItem::getLabelName()

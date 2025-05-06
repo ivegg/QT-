@@ -52,7 +52,6 @@ Client::Client(SelfInfo info ,TcpClient* tcp,QWidget *parent)
     });
     // 群组列表双击
     connect(groupsListWidget,&ChatListWidget::itemDoubleClicked,this,&Client::on_groupsListWidget_itemClicked);
-    connect(ui->pushButton_file, &QPushButton::clicked, this, &Client::on_pushButton_file_clicked);
     ui->pushBtn_refresh->setVisible(false); // 隐藏刷新按钮
     ui->stackedWidget_list->addWidget(messagesListWidget);
     ui->stackedWidget_list->addWidget(friendsListWidget);
@@ -583,7 +582,7 @@ void Client::ClientMsgHandler(json msg)
             for (const QJsonValue& v : history) {
                 QJsonObject m = v.toObject();
                 int sender_id = m["sender_id"].toInt();
-                QString content = m["content"].toString();
+            QString content = m["content"].toString();
                 int msg_type = m["msg_type"].toInt();
                 QString send_time = m["send_time"].toString();
                 chatWindow->pushMsg(send_time, sender_id == selfInfo.account ? 0 : 1);
@@ -593,7 +592,7 @@ void Client::ClientMsgHandler(json msg)
                     chatWindow->sendImages(StringTool::GetImagesFromHtml(content), sender_id == selfInfo.account ? 0 : 1);
                 } else if (msg_type == MixedContent) {
                     chatWindow->sendContentFromInput(content, sender_id == selfInfo.account ? 0 : 1);
-                }
+        }
             }
         } else if (type == 1) { // 群聊
             int group_id = msg["group_id"].toInt();
@@ -612,8 +611,8 @@ void Client::ClientMsgHandler(json msg)
                 for (const MemberInfo& member : groupMap[group_id].memberList) {
                     if (member.account == sender_id) {
                         senderName = member.name;
-                        break;
-                    }
+        break;
+    }
                 }
                 if (senderName.isEmpty()) senderName = QString::number(sender_id);
                 // 在 pushMsg 里加上名字
@@ -977,6 +976,7 @@ void Client::on_pushButton_image_clicked()
 
 void Client::on_pushButton_file_clicked()
 {
+    qDebug() << "on_pushButton_file_clicked called";
     QString filePath = QFileDialog::getOpenFileName(this, tr("选择要发送的文件"), "", tr("所有文件 (*.*)"));
     if (filePath.isEmpty())
         return;

@@ -69,7 +69,7 @@
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
+          <enum>Qt::FocusPolicy::NoFocus</enum>
          </property>
          <property name="styleSheet">
           <string notr="true">border:0</string>
@@ -105,26 +105,29 @@
           <string notr="true">background-color:#6F8E92</string>
          </property>
         </widget>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <widget class="QWidget" name="widget" native="true">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <widget class="QPushButton" name="pushBtn_hide">
-       <property name="geometry">
-        <rect>
-         <x>390</x>
-         <y>0</y>
-         <width>34</width>
-         <height>40</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton {
+        <widget class="QWidget" name="widget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>0</y>
+           <width>474</width>
+           <height>669</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <widget class="QPushButton" name="pushBtn_hide">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>0</y>
+            <width>34</width>
+            <height>40</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
 	border: none; /* no border for a flat push button */
 	image: url(:/src/min.png); /* 最小化 */
 	min-width: 34px;
@@ -135,32 +138,32 @@
 QPushButton::hover {
 	background-color: rgba(166,166,166, 50); 
 }</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="src.qrc">
-         <normaloff>:/pic/src/min.png</normaloff>:/pic/src/min.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>40</width>
-         <height>40</height>
-        </size>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushBtn_close">
-       <property name="geometry">
-        <rect>
-         <x>430</x>
-         <y>0</y>
-         <width>34</width>
-         <height>40</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton {
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/pic/src/min.png</normaloff>:/pic/src/min.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushBtn_close">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>0</y>
+            <width>34</width>
+            <height>40</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
 	border: none; /* no border for a flat push button */
 	image: url(:/src/close.png); /* 最小化 */
 	min-width: 34px;
@@ -171,22 +174,25 @@ QPushButton::hover {
 QPushButton::hover {
 	background-color: #f57575; 
 }</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="src.qrc">
-         <normaloff>:/pic/src/close.png</normaloff>:/pic/src/close.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>40</width>
-         <height>40</height>
-        </size>
-       </property>
-      </widget>
-     </widget>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/pic/src/close.png</normaloff>:/pic/src/close.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
