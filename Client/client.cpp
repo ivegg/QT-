@@ -14,13 +14,18 @@
 #include <QTextBlock> // 文本块
 #include <QFileDialog> // 文件对话框
 #include "sendtextedit.h" // 自定义文本编辑器
-#include "selfinfowidget.h" // 个人信息窗口
 #include "verificationitem.h" // 验证消息项
 #include "IconSetting/iconselect.h" // 头像选择窗口
 #include <QTimer> // 定时器
 #include <QSizePolicy> // 尺寸策略
 #include <QPushButton> // 添加 QPushButton 头文件
 #include <QMessageBox> // 添加 QMessageBox 头文件
+#include <QApplication>
+#include <QRubberBand>
+#include <QPainter>
+#include <QClipboard>
+#include <QBuffer>
+#include "screenshotwidget.h"
 
 // 构造函数，初始化主界面和各个控件
 Client::Client(SelfInfo info ,TcpClient* tcp,QWidget *parent)
@@ -775,13 +780,6 @@ void Client::keyPressEvent(QKeyEvent *event)
     }
 }
 
-
-void Client::on_pushButton_emoj_3_clicked()
-{
-    SelfInfoWidget* w = new SelfInfoWidget;
-    w->show();
-}
-
 void Client::on_pushButton_msg_list_clicked()
 {
     if(curListWidgetIndex == 0)
@@ -1010,4 +1008,27 @@ void Client::on_pushButton_file_clicked()
             chatWindow->addFileMessage(fileName, QString(fileData.toBase64()), true);
         }
     }
+}
+
+void Client::on_pushButton_screenshot_clicked() {
+    // 实现截图功能
+    ScreenShotWidget *shot = new ScreenShotWidget();
+    connect(shot, &ScreenShotWidget::regionSelected, this, [this, shot]() {
+        QRect rect = shot->getSelectedRect();
+        QPixmap fullPixmap = shot->getScreenPixmap();
+        if (rect.isNull() || rect.width() < 5 || rect.height() < 5) {
+            shot->deleteLater();
+            return;
+        }
+        QPixmap cropped = fullPixmap.copy(rect);
+        QByteArray byteArray;
+        QBuffer buffer(&byteArray);
+        buffer.open(QIODevice::WriteOnly);
+        cropped.save(&buffer, "PNG");
+        QString base64Image = byteArray.toBase64();
+        ui->textEdit_send->insertHtml("<img src='data:image/png;base64," + base64Image + "' />");
+        ui->textEdit_send->setFocus();
+        shot->deleteLater();
+    });
+    shot->show();
 }

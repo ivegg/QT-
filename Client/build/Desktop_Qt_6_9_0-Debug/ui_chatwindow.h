@@ -12,8 +12,8 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QWidget>
-#include <sendtextedit.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -21,7 +21,7 @@ class Ui_ChatWindow
 {
 public:
     QGridLayout *gridLayout;
-    SendTextEdit *textEdit;
+    QTextBrowser *textEdit;
 
     void setupUi(QWidget *ChatWindow)
     {
@@ -31,7 +31,7 @@ public:
         ChatWindow->resize(620, 450);
         gridLayout = new QGridLayout(ChatWindow);
         gridLayout->setObjectName("gridLayout");
-        textEdit = new SendTextEdit(ChatWindow);
+        textEdit = new QTextBrowser(ChatWindow);
         textEdit->setObjectName("textEdit");
         textEdit->setEnabled(true);
         textEdit->setStyleSheet(QString::fromUtf8("QScrollBar:vertical {\n"
@@ -52,7 +52,7 @@ public:
 "    border-radius: 10px;\n"
 "}\n"
 ""));
-        textEdit->setFrameShape(QFrame::NoFrame);
+        textEdit->setFrameShape(QFrame::Shape::NoFrame);
         textEdit->setReadOnly(true);
 
         gridLayout->addWidget(textEdit, 0, 0, 1, 1);

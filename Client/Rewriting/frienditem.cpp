@@ -6,7 +6,6 @@
 #include "stringtool.h"
 #include <QSslSocket>
 
-FriendInfoWidget *FriendItem::curWidget = nullptr;
 FriendItem::FriendItem(FriendInfo _info, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::FriendItem)
@@ -30,26 +29,12 @@ FriendItem::FriendItem(GroupInfo _info, QWidget *parent) :
     m_name = _info.groupName;
     ui->label_sig->hide();
     Init();
-
 }
 
 void FriendItem::Init() {
     ui->lineEdit_newMsg->hide();
     timer = new QTimer;
     timer->setInterval(1000);
-    if(m_type)
-        widget = new  FriendInfoWidget(groupInfo);
-    else
-        widget = new  FriendInfoWidget(info);
-    curWidget = widget;
-    connect(timer,&QTimer::timeout,this,[=](){
-        widget->close();
-    });
-
-    connect(ui->label_icon,&FriendIconLabel::enterIconLabel,this,&FriendItem::showInfoWidget);
-    connect(ui->label_icon,&FriendIconLabel::leaveIconLabel,this,&FriendItem::closeInfoWidget);
-    connect(widget,&FriendInfoWidget::enterWidget,this,[&](){timer->stop();});
-    connect(widget,&FriendInfoWidget::leaveWidget,this,[&](){timer->start();});
     ui->label_icon->SetIcon(info.icon);
 }
 
@@ -131,33 +116,5 @@ void FriendItem::on_lineEdit_newMsg_textChanged(const QString &arg1)
    }
    else
        ui->lineEdit_newMsg->show();
-}
-
-void FriendItem::showInfoWidget()
-{
-    if(!curWidget->isHidden())
-    {
-        if(curWidget == widget)
-            return;
-        curWidget->close();
-    }
-    QPoint labelPos = ui->label_icon->pos();
-    QPoint globalPos = this->mapToGlobal(QPoint(0,0)) + labelPos;
-    int x = globalPos.x();
-    if(x>(widget->width()+100))
-        globalPos.setX(x-widget->width()-100);
-    else
-         globalPos.setX(this->parentWidget()->width()+this->mapToGlobal(QPoint(0,0)).x());
-    //globalPos.setY(globalPos.y()-widget->height());
-    curWidget = widget;
-    widget->move(globalPos);
-    timer->stop();
-    widget->show();
-        //qDebug() << "x:" << StringTool::Int2QStr(globalPos.x()) << "y:" << StringTool::Int2QStr(globalPos.y());
-}
-
-void FriendItem::closeInfoWidget()
-{
-    timer->start();
 }
 

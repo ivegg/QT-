@@ -43,9 +43,7 @@ template <> constexpr inline auto FriendItem::qt_create_metaobjectdata<qt_meta_t
         "FriendItem",
         "on_lineEdit_newMsg_textChanged",
         "",
-        "arg1",
-        "showInfoWidget",
-        "closeInfoWidget"
+        "arg1"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -53,10 +51,6 @@ template <> constexpr inline auto FriendItem::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::SlotData<void(const QString &)>(1, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::QString, 3 },
         }}),
-        // Slot 'showInfoWidget'
-        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'closeInfoWidget'
-        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -81,8 +75,6 @@ void FriendItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->on_lineEdit_newMsg_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 1: _t->showInfoWidget(); break;
-        case 2: _t->closeInfoWidget(); break;
         default: ;
         }
     }
@@ -107,14 +99,14 @@ int FriendItem::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 1)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 1;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 1)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 1;
     }
     return _id;
 }

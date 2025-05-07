@@ -1,9 +1,13 @@
 #ifndef FRIENDICONLABEL_H
 #define FRIENDICONLABEL_H
 #include <QLabel>
-#include "friendinfowidget.h"
 #include <QToolTip>
 #include <QMouseEvent>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QSslConfiguration>
+#include <QSsl>
 
 class FriendIconLabel : public QLabel
 {

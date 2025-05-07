@@ -1,17 +1,27 @@
 #include "common.h"
 #include "chatTask.h"
+#include <unistd.h>
+#include <limits.h>
+#ifndef PATH_MAX
+#define PATH_MAX 4096
+#endif
 
 using namespace std;
 static pthread_mutex_t _mxMessage;
 
-SQLite::Database db("user.db", SQLite::OPEN_READWRITE | SQLite::OPEN_CREATE);
-
+// 直接指定数据库文件的绝对路径
+SQLite::Database db("/home/share/chat-forge/server/build/user.db", SQLite::OPEN_READWRITE | SQLite::OPEN_CREATE);
 
 //在线用户:<socketfd,account>
 map<int,int> userMap;
 int main(int argc,char* argv[])
 {
-    //db->open("user.db");
+    // 输出数据库文件路径
+    printf("数据库文件路径: /home/share/chat-forge/server/build/user.db\n");
+    
+    char cwd[PATH_MAX];
+    getcwd(cwd, sizeof(cwd));
+    printf("当前工作目录: %s\n", cwd);
 
     printf("=== SERVER STARTED ===\n");
     

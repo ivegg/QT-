@@ -19,6 +19,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include <friendiconlabel.h>
 #include <sendtextedit.h>
@@ -28,14 +29,14 @@ QT_BEGIN_NAMESPACE
 class Ui_Client
 {
 public:
-    QHBoxLayout *horizontalLayout_2;
+    QGridLayout *gridLayout;
     QWidget *centerWidget;
-    QGridLayout *gridLayout_4;
+    QHBoxLayout *horizontalLayout_3;
     QWidget *widget_main;
+    QHBoxLayout *horizontalLayout_4;
     QWidget *widget_side;
     QPushButton *pushButton_msg_list;
     QPushButton *pushBtn_refresh;
-    QPushButton *pushButton_emoj_3;
     QPushButton *pushButton_friend_list;
     QPushButton *pushButton_group_list;
     QPushButton *pushButton_system_msg;
@@ -51,16 +52,7 @@ public:
     QWidget *page_5;
     QWidget *page_6;
     QWidget *widget_chatting;
-    QGridLayout *gridLayout;
-    QWidget *widget_3;
-    QGridLayout *gridLayout_10;
-    QPushButton *pushBtn_send;
-    QSpacerItem *horizontalSpacer;
-    QWidget *widget_chatWindow;
-    QGridLayout *gridLayout_3;
-    QStackedWidget *stackedWidget;
-    QWidget *page;
-    QWidget *page_2;
+    QVBoxLayout *verticalLayout;
     QWidget *widget_2;
     QGridLayout *gridLayout_8;
     QGridLayout *gridLayout_7;
@@ -69,8 +61,11 @@ public:
     QWidget *widget_16;
     QWidget *widget_15;
     QPushButton *pushButton;
-    QWidget *widget_send;
-    QGridLayout *gridLayout_14;
+    QWidget *widget_chatWindow;
+    QGridLayout *gridLayout_3;
+    QStackedWidget *stackedWidget;
+    QWidget *page;
+    QWidget *page_2;
     QWidget *widget_4;
     QPushButton *pushButton_emoj;
     QPushButton *pushButton_screenshot;
@@ -78,29 +73,34 @@ public:
     QPushButton *pushButton_file;
     QPushButton *pushButton_image;
     SendTextEdit *textEdit_send;
+    QWidget *widget_3;
+    QGridLayout *gridLayout_10;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *pushBtn_send;
 
     void setupUi(QWidget *Client)
     {
         if (Client->objectName().isEmpty())
             Client->setObjectName("Client");
-        Client->resize(933, 657);
+        Client->resize(883, 667);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/pic/src/wechat2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
         Client->setWindowIcon(icon);
         Client->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        horizontalLayout_2 = new QHBoxLayout(Client);
-        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        gridLayout = new QGridLayout(Client);
+        gridLayout->setObjectName("gridLayout");
         centerWidget = new QWidget(Client);
         centerWidget->setObjectName("centerWidget");
-        gridLayout_4 = new QGridLayout(centerWidget);
-        gridLayout_4->setSpacing(0);
-        gridLayout_4->setObjectName("gridLayout_4");
-        gridLayout_4->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout_3 = new QHBoxLayout(centerWidget);
+        horizontalLayout_3->setSpacing(0);
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
         widget_main = new QWidget(centerWidget);
         widget_main->setObjectName("widget_main");
+        horizontalLayout_4 = new QHBoxLayout(widget_main);
+        horizontalLayout_4->setObjectName("horizontalLayout_4");
         widget_side = new QWidget(widget_main);
         widget_side->setObjectName("widget_side");
-        widget_side->setGeometry(QRect(-2, 10, 80, 657));
         widget_side->setMinimumSize(QSize(80, 0));
         widget_side->setMaximumSize(QSize(80, 16777215));
         widget_side->setStyleSheet(QString::fromUtf8("background-color: #0ED07B;\n"
@@ -108,7 +108,7 @@ public:
 "max-width:80;"));
         pushButton_msg_list = new QPushButton(widget_side);
         pushButton_msg_list->setObjectName("pushButton_msg_list");
-        pushButton_msg_list->setGeometry(QRect(20, 180, 40, 40));
+        pushButton_msg_list->setGeometry(QRect(20, 140, 40, 40));
         pushButton_msg_list->setMinimumSize(QSize(40, 0));
         pushButton_msg_list->setMaximumSize(QSize(40, 16777215));
         pushButton_msg_list->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
@@ -128,7 +128,7 @@ public:
         pushButton_msg_list->setChecked(false);
         pushBtn_refresh = new QPushButton(widget_side);
         pushBtn_refresh->setObjectName("pushBtn_refresh");
-        pushBtn_refresh->setGeometry(QRect(20, 610, 42, 40));
+        pushBtn_refresh->setGeometry(QRect(20, 580, 42, 40));
         pushBtn_refresh->setMinimumSize(QSize(42, 0));
         pushBtn_refresh->setMaximumSize(QSize(42, 2000));
         QFont font;
@@ -160,30 +160,9 @@ public:
 "QPushButton:pressed {\n"
 "	background-color: rgb(7,193,96);\n"
 "}"));
-        pushButton_emoj_3 = new QPushButton(widget_side);
-        pushButton_emoj_3->setObjectName("pushButton_emoj_3");
-        pushButton_emoj_3->setGeometry(QRect(20, 110, 40, 40));
-        pushButton_emoj_3->setMinimumSize(QSize(40, 0));
-        pushButton_emoj_3->setMaximumSize(QSize(40, 16777215));
-        pushButton_emoj_3->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        pushButton_emoj_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"\n"
-"	border: none; /* no border for a flat push button */\n"
-"	image: url(:/src/SelfCenter1.png); \n"
-"	max-width:40;\n"
-"	min-width:40;\n"
-"}\n"
-"QPushButton::hover {\n"
-"	image: url(:/src/SelfCenter2.png); \n"
-"}\n"
-"\n"
-"\n"
-""));
-        pushButton_emoj_3->setCheckable(false);
-        pushButton_emoj_3->setChecked(false);
         pushButton_friend_list = new QPushButton(widget_side);
         pushButton_friend_list->setObjectName("pushButton_friend_list");
-        pushButton_friend_list->setGeometry(QRect(20, 250, 40, 40));
+        pushButton_friend_list->setGeometry(QRect(20, 210, 40, 40));
         pushButton_friend_list->setMinimumSize(QSize(40, 0));
         pushButton_friend_list->setMaximumSize(QSize(40, 16777215));
         pushButton_friend_list->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
@@ -204,7 +183,7 @@ public:
         pushButton_friend_list->setChecked(false);
         pushButton_group_list = new QPushButton(widget_side);
         pushButton_group_list->setObjectName("pushButton_group_list");
-        pushButton_group_list->setGeometry(QRect(20, 320, 40, 40));
+        pushButton_group_list->setGeometry(QRect(20, 290, 40, 40));
         pushButton_group_list->setMinimumSize(QSize(40, 0));
         pushButton_group_list->setMaximumSize(QSize(40, 16777215));
         pushButton_group_list->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
@@ -220,7 +199,7 @@ public:
         pushButton_group_list->setChecked(false);
         pushButton_system_msg = new QPushButton(widget_side);
         pushButton_system_msg->setObjectName("pushButton_system_msg");
-        pushButton_system_msg->setGeometry(QRect(20, 390, 40, 40));
+        pushButton_system_msg->setGeometry(QRect(20, 370, 40, 40));
         pushButton_system_msg->setMinimumSize(QSize(40, 0));
         pushButton_system_msg->setMaximumSize(QSize(40, 16777215));
         pushButton_system_msg->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
@@ -264,9 +243,11 @@ public:
 "min-width:80;\n"
 "border:none;\n"
 "background-color:transparent;"));
+
+        horizontalLayout_4->addWidget(widget_side);
+
         widget_list = new QWidget(widget_main);
         widget_list->setObjectName("widget_list");
-        widget_list->setGeometry(QRect(78, 10, 202, 94));
         gridLayout_2 = new QGridLayout(widget_list);
         gridLayout_2->setSpacing(0);
         gridLayout_2->setObjectName("gridLayout_2");
@@ -337,92 +318,13 @@ public:
 
         gridLayout_2->addWidget(stackedWidget_list, 2, 0, 1, 1);
 
+
+        horizontalLayout_4->addWidget(widget_list);
+
         widget_chatting = new QWidget(widget_main);
         widget_chatting->setObjectName("widget_chatting");
-        widget_chatting->setGeometry(QRect(330, 10, 601, 657));
-        gridLayout = new QGridLayout(widget_chatting);
-        gridLayout->setSpacing(0);
-        gridLayout->setObjectName("gridLayout");
-        widget_3 = new QWidget(widget_chatting);
-        widget_3->setObjectName("widget_3");
-        widget_3->setMinimumSize(QSize(0, 35));
-        widget_3->setMaximumSize(QSize(16777215, 35));
-        widget_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        gridLayout_10 = new QGridLayout(widget_3);
-        gridLayout_10->setSpacing(0);
-        gridLayout_10->setObjectName("gridLayout_10");
-        gridLayout_10->setContentsMargins(0, 0, 0, 0);
-        pushBtn_send = new QPushButton(widget_3);
-        pushBtn_send->setObjectName("pushBtn_send");
-        pushBtn_send->setMinimumSize(QSize(70, 25));
-        pushBtn_send->setMaximumSize(QSize(70, 25));
-        pushBtn_send->setFont(font);
-        pushBtn_send->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"	color: rgb(96,96,96);\n"
-"	border-radius: 5px;	\n"
-"	border-style: solid;\n"
-"	background-color: rgb(245,245,245);\n"
-"\n"
-"	border-right:1px solid #E5E5E5;\n"
-"	border-top:1px solid #E5E5E5;\n"
-"	border-left:1px solid #E5E5E5;\n"
-"	border-bottom:1px solid #E5E5E5;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"	color: rgb(255, 255, 255);\n"
-"	background-color: rgb(18,150,17);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"	background-color: rgb(7,193,96);\n"
-"}"));
-
-        gridLayout_10->addWidget(pushBtn_send, 0, 2, 1, 1);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout_10->addItem(horizontalSpacer, 0, 1, 1, 1);
-
-
-        gridLayout->addWidget(widget_3, 4, 0, 1, 1);
-
-        widget_chatWindow = new QWidget(widget_chatting);
-        widget_chatWindow->setObjectName("widget_chatWindow");
-        widget_chatWindow->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
-        widget_chatWindow->setAutoFillBackground(false);
-        widget_chatWindow->setStyleSheet(QString::fromUtf8(""));
-        gridLayout_3 = new QGridLayout(widget_chatWindow);
-        gridLayout_3->setSpacing(0);
-        gridLayout_3->setObjectName("gridLayout_3");
-        gridLayout_3->setContentsMargins(0, 0, 0, 0);
-        stackedWidget = new QStackedWidget(widget_chatWindow);
-        stackedWidget->setObjectName("stackedWidget");
-        QSizePolicy sizePolicy2(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(stackedWidget->sizePolicy().hasHeightForWidth());
-        stackedWidget->setSizePolicy(sizePolicy2);
-        stackedWidget->setAutoFillBackground(false);
-        stackedWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
-"border-color: rgb(199, 200, 194);"));
-        stackedWidget->setFrameShadow(QFrame::Shadow::Plain);
-        stackedWidget->setLineWidth(10);
-        page = new QWidget();
-        page->setObjectName("page");
-        page->setAutoFillBackground(false);
-        page->setStyleSheet(QString::fromUtf8("image: url(:/src/chatbg.png);\n"
-"background-color:#F5F5F5;"));
-        stackedWidget->addWidget(page);
-        page_2 = new QWidget();
-        page_2->setObjectName("page_2");
-        stackedWidget->addWidget(page_2);
-
-        gridLayout_3->addWidget(stackedWidget, 0, 0, 1, 1);
-
-
-        gridLayout->addWidget(widget_chatWindow, 1, 0, 1, 1);
-
+        verticalLayout = new QVBoxLayout(widget_chatting);
+        verticalLayout->setObjectName("verticalLayout");
         widget_2 = new QWidget(widget_chatting);
         widget_2->setObjectName("widget_2");
         widget_2->setMinimumSize(QSize(0, 0));
@@ -485,18 +387,47 @@ public:
         gridLayout_8->addLayout(gridLayout_7, 0, 0, 1, 1);
 
 
-        gridLayout->addWidget(widget_2, 0, 0, 1, 1);
+        verticalLayout->addWidget(widget_2);
 
-        widget_send = new QWidget(widget_chatting);
-        widget_send->setObjectName("widget_send");
-        widget_send->setMinimumSize(QSize(0, 0));
-        widget_send->setMaximumSize(QSize(16777215, 16777215));
-        gridLayout_14 = new QGridLayout(widget_send);
-        gridLayout_14->setSpacing(0);
-        gridLayout_14->setObjectName("gridLayout_14");
-        gridLayout_14->setContentsMargins(0, 0, 0, 0);
-        widget_4 = new QWidget(widget_send);
+        widget_chatWindow = new QWidget(widget_chatting);
+        widget_chatWindow->setObjectName("widget_chatWindow");
+        widget_chatWindow->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
+        widget_chatWindow->setAutoFillBackground(false);
+        widget_chatWindow->setStyleSheet(QString::fromUtf8(""));
+        gridLayout_3 = new QGridLayout(widget_chatWindow);
+        gridLayout_3->setObjectName("gridLayout_3");
+        gridLayout_3->setContentsMargins(0, 0, 0, 0);
+        stackedWidget = new QStackedWidget(widget_chatWindow);
+        stackedWidget->setObjectName("stackedWidget");
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(stackedWidget->sizePolicy().hasHeightForWidth());
+        stackedWidget->setSizePolicy(sizePolicy2);
+        stackedWidget->setAutoFillBackground(false);
+        stackedWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"border-color: rgb(199, 200, 194);"));
+        stackedWidget->setFrameShadow(QFrame::Shadow::Plain);
+        stackedWidget->setLineWidth(10);
+        page = new QWidget();
+        page->setObjectName("page");
+        page->setAutoFillBackground(false);
+        page->setStyleSheet(QString::fromUtf8("image: url(:/src/chatbg.png);\n"
+"background-color:#F5F5F5;"));
+        stackedWidget->addWidget(page);
+        page_2 = new QWidget();
+        page_2->setObjectName("page_2");
+        stackedWidget->addWidget(page_2);
+
+        gridLayout_3->addWidget(stackedWidget, 0, 0, 1, 1);
+
+        widget_4 = new QWidget(widget_chatWindow);
         widget_4->setObjectName("widget_4");
+        QSizePolicy sizePolicy3(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(widget_4->sizePolicy().hasHeightForWidth());
+        widget_4->setSizePolicy(sizePolicy3);
         widget_4->setMinimumSize(QSize(0, 30));
         widget_4->setMaximumSize(QSize(16777215, 30));
         widget_4->setStyleSheet(QString::fromUtf8("background-color: rgb(200, 196, 188);"));
@@ -586,12 +517,10 @@ public:
 "	image: url(:/pic/src/image.png); \n"
 "}"));
 
-        gridLayout_14->addWidget(widget_4, 0, 0, 1, 1);
+        gridLayout_3->addWidget(widget_4, 1, 0, 1, 1);
 
-        textEdit_send = new SendTextEdit(widget_send);
+        textEdit_send = new SendTextEdit(widget_chatWindow);
         textEdit_send->setObjectName("textEdit_send");
-        textEdit_send->setMinimumSize(QSize(0, 0));
-        textEdit_send->setMaximumSize(QSize(16777215, 16777215));
         QFont font3;
         font3.setFamilies({QString::fromUtf8("\346\226\260\345\256\213\344\275\223")});
         font3.setPointSize(12);
@@ -602,20 +531,68 @@ public:
         textEdit_send->setVerticalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
         textEdit_send->setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
 
-        gridLayout_14->addWidget(textEdit_send, 4, 0, 1, 1);
+        gridLayout_3->addWidget(textEdit_send, 2, 0, 1, 1);
 
 
-        gridLayout->addWidget(widget_send, 3, 0, 1, 1);
+        verticalLayout->addWidget(widget_chatWindow);
+
+        widget_3 = new QWidget(widget_chatting);
+        widget_3->setObjectName("widget_3");
+        widget_3->setMinimumSize(QSize(0, 35));
+        widget_3->setMaximumSize(QSize(16777215, 35));
+        widget_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        gridLayout_10 = new QGridLayout(widget_3);
+        gridLayout_10->setSpacing(0);
+        gridLayout_10->setObjectName("gridLayout_10");
+        gridLayout_10->setContentsMargins(0, 0, 0, 0);
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_10->addItem(horizontalSpacer, 0, 1, 1, 1);
+
+        pushBtn_send = new QPushButton(widget_3);
+        pushBtn_send->setObjectName("pushBtn_send");
+        pushBtn_send->setMinimumSize(QSize(70, 25));
+        pushBtn_send->setMaximumSize(QSize(70, 25));
+        pushBtn_send->setFont(font);
+        pushBtn_send->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: rgb(96,96,96);\n"
+"	border-radius: 5px;	\n"
+"	border-style: solid;\n"
+"	background-color: rgb(245,245,245);\n"
+"\n"
+"	border-right:1px solid #E5E5E5;\n"
+"	border-top:1px solid #E5E5E5;\n"
+"	border-left:1px solid #E5E5E5;\n"
+"	border-bottom:1px solid #E5E5E5;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(18,150,17);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	background-color: rgb(7,193,96);\n"
+"}"));
+
+        gridLayout_10->addWidget(pushBtn_send, 0, 2, 1, 1);
 
 
-        gridLayout_4->addWidget(widget_main, 0, 0, 1, 1);
+        verticalLayout->addWidget(widget_3);
 
 
-        horizontalLayout_2->addWidget(centerWidget);
+        horizontalLayout_4->addWidget(widget_chatting);
+
+
+        horizontalLayout_3->addWidget(widget_main);
+
+
+        gridLayout->addWidget(centerWidget, 0, 0, 1, 1);
 
 
         retranslateUi(Client);
 
+        stackedWidget_list->setCurrentIndex(0);
         stackedWidget->setCurrentIndex(1);
 
 
@@ -627,7 +604,6 @@ public:
         Client->setWindowTitle(QCoreApplication::translate("Client", "Client", nullptr));
         pushButton_msg_list->setText(QString());
         pushBtn_refresh->setText(QCoreApplication::translate("Client", "\345\210\267\346\226\260", nullptr));
-        pushButton_emoj_3->setText(QString());
         pushButton_friend_list->setText(QString());
         pushButton_group_list->setText(QString());
         pushButton_system_msg->setText(QString());
@@ -637,7 +613,6 @@ public:
         pushButton_addFriend->setToolTip(QCoreApplication::translate("Client", "\346\267\273\345\212\240\345\245\275\345\217\213", nullptr));
 #endif // QT_CONFIG(tooltip)
         pushButton_addFriend->setText(QString());
-        pushBtn_send->setText(QCoreApplication::translate("Client", "\345\217\221\351\200\201", nullptr));
         label_info->setText(QCoreApplication::translate("Client", "\350\201\212\345\244\251\344\277\241\346\201\257", nullptr));
         pushButton->setText(QString());
         pushButton_emoj->setText(QString());
@@ -645,6 +620,7 @@ public:
         pushButton_chat->setText(QString());
         pushButton_file->setText(QString());
         pushButton_image->setText(QString());
+        pushBtn_send->setText(QCoreApplication::translate("Client", "\345\217\221\351\200\201", nullptr));
     } // retranslateUi
 
 };

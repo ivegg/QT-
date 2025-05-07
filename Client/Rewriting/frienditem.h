@@ -3,7 +3,6 @@
 
 #include <QWidget>
 #include "chatwindow.h"
-#include "friendinfowidget.h"
 #include <QTimer>
 
 namespace Ui {
@@ -39,8 +38,7 @@ public:
 
 private slots:
     void on_lineEdit_newMsg_textChanged(const QString &arg1);
-    void showInfoWidget();
-    void closeInfoWidget();
+
 
 private:
     bool enterStatus = false;
@@ -51,9 +49,7 @@ private:
     QString m_name;
     // 0 friend 1 group
     int m_type;
-    FriendInfoWidget *widget;
     QTimer *timer;
-    static FriendInfoWidget *curWidget;
 };
 
 #endif // FRIENTITEM_H

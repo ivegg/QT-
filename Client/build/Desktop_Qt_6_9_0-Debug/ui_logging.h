@@ -378,7 +378,7 @@ public:
         lineEdit_account->setText(QCoreApplication::translate("Logging", "123", nullptr));
         lineEdit_password->setText(QCoreApplication::translate("Logging", "123", nullptr));
         pushBtn_hide->setText(QString());
-        label_4->setText(QCoreApplication::translate("Logging", "OurChat", nullptr));
+        label_4->setText(QCoreApplication::translate("Logging", "WeChat", nullptr));
         pushButton_seePassword->setText(QString());
         label_6->setText(QString());
         pushButton_login->setText(QCoreApplication::translate("Logging", "\347\231\273\345\275\225", nullptr));

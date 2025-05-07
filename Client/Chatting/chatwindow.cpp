@@ -137,6 +137,12 @@ void ChatWindow::sendFile(const QString &fileName, const QString &filePath,int f
 
 void ChatWindow::sendImages(const QList<QString>& base64Images, int flag) {
     for (const QString& base64Image : base64Images) {
+        // 先插入时间戳（如果需要，可以传入时间戳字符串）
+        // pushMsg("2025-05-07 23:23:13", flag); // 由外部调用保证
+
+        // 插入一个空行，确保图片和时间戳分开
+        textBrowser->append("");
+
         QByteArray imageData = QByteArray::fromBase64(base64Image.toLatin1());
         QImage image;
         image.loadFromData(imageData);
@@ -147,45 +153,33 @@ void ChatWindow::sendImages(const QList<QString>& base64Images, int flag) {
         int originalHeight = image.height();
         int maxSize = 150;
         if (originalWidth > maxSize || originalHeight > maxSize) {
-            // Only scale the image if either dimension is greater than 150 pixels
             float aspectRatio = static_cast<float>(originalWidth) / static_cast<float>(originalHeight);
             int newWidth, newHeight;
-
             if (aspectRatio >= 1) {
-                // Width is greater than height
                 newWidth = maxSize;
                 newHeight = static_cast<int>((float)maxSize / aspectRatio);
             } else {
-                // Height is greater than width
                 newHeight = maxSize;
                 newWidth = static_cast<int>((float)maxSize * aspectRatio);
             }
-
             image = image.scaled(newWidth, newHeight, Qt::KeepAspectRatio, Qt::FastTransformation);
         }
         QPixmap pixmap = QPixmap::fromImage(image);
-        // 将缩略图插入 QTextEdit
         QTextImageFormat imageFormat;
         imageFormat.setWidth(pixmap.width());
         imageFormat.setHeight(pixmap.height());
         imageFormat.setName("data:image/png;base64," + base64Image);
         imageFormat.setProperty(QTextFormat::UserProperty, originalBase64Image);
-
-        // 创建新的 QTextCursor
         QTextCursor cursor = textBrowser->textCursor();
         cursor.movePosition(QTextCursor::End);
         cursor.insertImage(imageFormat);
-
-        // 插入换行
-        pushMsg("",flag);
-
-        // 设置文本对齐方式
+        // 插入换行，确保图片单独一行
+        cursor.insertBlock();
         QTextBlockFormat blockFormat;
         blockFormat.setAlignment(flag ? Qt::AlignLeft : Qt::AlignRight);
         cursor.setBlockFormat(blockFormat);
     }
-
-    textBrowser->verticalScrollBar()->setValue(textBrowser->verticalScrollBar()->maximum()); // 自动滚动到底部
+    textBrowser->verticalScrollBar()->setValue(textBrowser->verticalScrollBar()->maximum());
     qDebug() << "send images";
 }
 

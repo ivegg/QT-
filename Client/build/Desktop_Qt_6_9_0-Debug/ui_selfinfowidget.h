@@ -63,7 +63,7 @@ public:
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(380, 363, 80, 80));
         pushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        pushButton->setFocusPolicy(Qt::NoFocus);
+        pushButton->setFocusPolicy(Qt::FocusPolicy::NoFocus);
         pushButton->setStyleSheet(QString::fromUtf8("border:0"));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/src/dz2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
@@ -75,14 +75,9 @@ public:
         widget_3->setObjectName("widget_3");
         widget_3->setGeometry(QRect(0, 450, 473, 217));
         widget_3->setStyleSheet(QString::fromUtf8("background-color:#6F8E92"));
-
-        gridLayout->addWidget(widget_2, 1, 0, 1, 1);
-
-
-        horizontalLayout->addLayout(gridLayout);
-
-        widget = new QWidget(horizontalLayoutWidget);
+        widget = new QWidget(widget_2);
         widget->setObjectName("widget");
+        widget->setGeometry(QRect(470, 0, 474, 669));
         widget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         pushBtn_hide = new QPushButton(widget);
         pushBtn_hide->setObjectName("pushBtn_hide");
@@ -121,7 +116,10 @@ public:
         pushBtn_close->setIcon(icon3);
         pushBtn_close->setIconSize(QSize(40, 40));
 
-        horizontalLayout->addWidget(widget);
+        gridLayout->addWidget(widget_2, 1, 0, 1, 1);
+
+
+        horizontalLayout->addLayout(gridLayout);
 
 
         retranslateUi(SelfInfoWidget);

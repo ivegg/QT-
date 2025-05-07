@@ -60,7 +60,6 @@ private slots:
     // void on_pushBtn_close_clicked();
     // void on_pushBtn_hide_clicked();
     // void on_pushBtn_max_clicked();
-    void on_pushButton_emoj_3_clicked();
 
     void on_pushButton_msg_list_clicked();
 
@@ -77,6 +76,8 @@ private slots:
     void on_pushButton_image_clicked();
 
     void on_pushButton_file_clicked();
+
+    void on_pushButton_screenshot_clicked();
 
 public slots:
     void on_pushButton_addFriend_clicked();

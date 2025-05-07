@@ -32,6 +32,7 @@ public:
     QListWidget *listWidget;
     QRadioButton *radioButton_friend;
     QRadioButton *radioButton_group;
+    QPushButton *pushButton_create;
 
     void setupUi(QWidget *AddFriend)
     {
@@ -41,7 +42,7 @@ public:
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/pic/src/wechat2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
         AddFriend->setWindowIcon(icon);
-        AddFriend->setLayoutDirection(Qt::LeftToRight);
+        AddFriend->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
         AddFriend->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lineEdit = new QLineEdit(AddFriend);
         lineEdit->setObjectName("lineEdit");
@@ -80,6 +81,9 @@ public:
         radioButton_group = new QRadioButton(AddFriend);
         radioButton_group->setObjectName("radioButton_group");
         radioButton_group->setGeometry(QRect(260, 100, 71, 21));
+        pushButton_create = new QPushButton(AddFriend);
+        pushButton_create->setObjectName("pushButton_create");
+        pushButton_create->setGeometry(QRect(440, 80, 80, 40));
 
         retranslateUi(AddFriend);
 
@@ -97,6 +101,7 @@ public:
 #endif // QT_CONFIG(accessibility)
         radioButton_friend->setText(QCoreApplication::translate("AddFriend", "\345\245\275\345\217\213", nullptr));
         radioButton_group->setText(QCoreApplication::translate("AddFriend", "\347\276\244\350\201\212", nullptr));
+        pushButton_create->setText(QCoreApplication::translate("AddFriend", "\345\210\233\345\273\272", nullptr));
     } // retranslateUi
 
 };

@@ -65,7 +65,7 @@ max-width:80;</string>
             <property name="geometry">
              <rect>
               <x>20</x>
-              <y>180</y>
+              <y>140</y>
               <width>40</width>
               <height>40</height>
              </rect>
@@ -175,60 +175,11 @@ QPushButton:pressed {
              <string>刷新</string>
             </property>
            </widget>
-           <widget class="QPushButton" name="pushButton_emoj_3">
-            <property name="geometry">
-             <rect>
-              <x>20</x>
-              <y>110</y>
-              <width>40</width>
-              <height>40</height>
-             </rect>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>40</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>40</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-
-	border: none; /* no border for a flat push button */
-	image: url(:/src/SelfCenter1.png); 
-	max-width:40;
-	min-width:40;
-}
-QPushButton::hover {
-	image: url(:/src/SelfCenter2.png); 
-}
-
-
-</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="checkable">
-             <bool>false</bool>
-            </property>
-            <property name="checked">
-             <bool>false</bool>
-            </property>
-           </widget>
            <widget class="QPushButton" name="pushButton_friend_list">
             <property name="geometry">
              <rect>
               <x>20</x>
-              <y>250</y>
+              <y>210</y>
               <width>40</width>
               <height>40</height>
              </rect>
@@ -285,7 +236,7 @@ QPushButton::hover {
             <property name="geometry">
              <rect>
               <x>20</x>
-              <y>320</y>
+              <y>290</y>
               <width>40</width>
               <height>40</height>
              </rect>
@@ -335,7 +286,7 @@ QPushButton::hover {
             <property name="geometry">
              <rect>
               <x>20</x>
-              <y>390</y>
+              <y>370</y>
               <width>40</width>
               <height>40</height>
              </rect>

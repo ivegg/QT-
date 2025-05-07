@@ -40,10 +40,17 @@ template <> constexpr inline auto ChatWindow::qt_create_metaobjectdata<qt_meta_t
 {
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
-        "ChatWindow"
+        "ChatWindow",
+        "onFileAnchorClicked",
+        "",
+        "url"
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Slot 'onFileAnchorClicked'
+        QtMocHelpers::SlotData<void(const QUrl &)>(1, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QUrl, 3 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -65,10 +72,12 @@ Q_CONSTINIT const QMetaObject ChatWindow::staticMetaObject = { {
 void ChatWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<ChatWindow *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->onFileAnchorClicked((*reinterpret_cast< std::add_pointer_t<QUrl>>(_a[1]))); break;
+        default: ;
+        }
+    }
 }
 
 const QMetaObject *ChatWindow::metaObject() const
@@ -87,6 +96,18 @@ void *ChatWindow::qt_metacast(const char *_clname)
 int ChatWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 1)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 1)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 1;
+    }
     return _id;
 }
 QT_WARNING_POP
