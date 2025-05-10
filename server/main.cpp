@@ -31,6 +31,8 @@ int main(int argc,char* argv[])
 	db.exec("CREATE TABLE IF NOT EXISTS user (account INTEGER PRIMARY KEY AUTOINCREMENT, password VARCHAR(32), name VARCHAR(32), signature TEXT, online INT DEFAULT 0 NOT NULL, icon TEXT);");
 	db.exec("CREATE TABLE IF NOT EXISTS member (member_id INTEGER, group_account INTEGER, group_nickname TEXT);");
 
+    // 启动时重置所有用户的online状态
+    db.exec("UPDATE user SET online=0");
 
     int default_port = 8888;
     int optch = 0;

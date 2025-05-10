@@ -68,7 +68,7 @@ public:
 
     void retranslateUi(QWidget *addgroup)
     {
-        addgroup->setWindowTitle(QCoreApplication::translate("addgroup", "Form", nullptr));
+        addgroup->setWindowTitle(QCoreApplication::translate("addgroup", "\345\210\233\345\273\272\347\276\244\350\201\212", nullptr));
 #if QT_CONFIG(accessibility)
         textEdit->setAccessibleDescription(QCoreApplication::translate("addgroup", "\351\252\214\350\257\201\344\277\241\346\201\257", nullptr));
 #endif // QT_CONFIG(accessibility)

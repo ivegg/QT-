@@ -16,7 +16,7 @@ class AddFriend : public QWidget
     Q_OBJECT
 
 public:
-    explicit AddFriend(SelfInfo _info,TcpClient* fd,QWidget *parent = nullptr);
+    explicit AddFriend(SelfInfo _info, TcpClient* fd, QWidget *parent = nullptr, const QString& defaultText = "");
     ~AddFriend();
 
     void Init();

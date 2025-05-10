@@ -27,7 +27,7 @@ QString StringTool::Int2QStr(int num)
 QString StringTool::MergeSendTimeMsg(QDateTime dateTime, int flag, QString name) {
     dateTime = QDateTime::currentDateTime();
     QString dateTimeString = dateTime.toString("yyyy-MM-dd hh:mm:ss");
-    if(flag)
+    if(flag && !name.isEmpty())
     {
         return dateTimeString + "  " + name + ":";
     }

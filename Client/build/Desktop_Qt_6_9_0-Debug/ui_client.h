@@ -67,11 +67,11 @@ public:
     QWidget *page;
     QWidget *page_2;
     QWidget *widget_4;
+    QHBoxLayout *horizontalLayout_2;
     QPushButton *pushButton_emoj;
-    QPushButton *pushButton_screenshot;
-    QPushButton *pushButton_chat;
-    QPushButton *pushButton_file;
     QPushButton *pushButton_image;
+    QPushButton *pushButton_screenshot;
+    QPushButton *pushButton_file;
     SendTextEdit *textEdit_send;
     QWidget *widget_3;
     QGridLayout *gridLayout_10;
@@ -431,9 +431,10 @@ public:
         widget_4->setMinimumSize(QSize(0, 30));
         widget_4->setMaximumSize(QSize(16777215, 30));
         widget_4->setStyleSheet(QString::fromUtf8("background-color: rgb(200, 196, 188);"));
+        horizontalLayout_2 = new QHBoxLayout(widget_4);
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
         pushButton_emoj = new QPushButton(widget_4);
         pushButton_emoj->setObjectName("pushButton_emoj");
-        pushButton_emoj->setGeometry(QRect(20, 6, 20, 20));
         pushButton_emoj->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none; /* no border for a flat push button */\n"
 "	image: url(:/pic/src/emoj.png); \n"
@@ -448,60 +449,11 @@ public:
 "QPushButton:pressed {\n"
 "	image: url(:/pic/src/emoj.png); \n"
 "}"));
-        pushButton_screenshot = new QPushButton(widget_4);
-        pushButton_screenshot->setObjectName("pushButton_screenshot");
-        pushButton_screenshot->setGeometry(QRect(120, 6, 20, 20));
-        pushButton_screenshot->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	border: none; /* no border for a flat push button */\n"
-"	image: url(:/pic/src/screenshot.png); \n"
-"	min-width: 20px;\n"
-"	max-width: 20px;\n"
-"	min-height: 20px;\n"
-"	max-height: 20px;\n"
-"}\n"
-"QPushButton::hover {\n"
-"	image: url(:/pic/src/screenshot2.png); \n"
-"}\n"
-"QPushButton:pressed {\n"
-"	image: url(:/pic/src/screenshot.png); \n"
-"}"));
-        pushButton_chat = new QPushButton(widget_4);
-        pushButton_chat->setObjectName("pushButton_chat");
-        pushButton_chat->setGeometry(QRect(170, 6, 20, 20));
-        pushButton_chat->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	border: none; /* no border for a flat push button */\n"
-"	image: url(:/pic/src/chat.png); \n"
-"	min-width: 20px;\n"
-"	max-width: 20px;\n"
-"	min-height: 20px;\n"
-"	max-height: 20px;\n"
-"}\n"
-"QPushButton::hover {\n"
-"	image: url(:/pic/src/chat2.png); \n"
-"}\n"
-"QPushButton:pressed {\n"
-"	image: url(:/pic/src/chat.png); \n"
-"}"));
-        pushButton_file = new QPushButton(widget_4);
-        pushButton_file->setObjectName("pushButton_file");
-        pushButton_file->setGeometry(QRect(220, 6, 20, 20));
-        pushButton_file->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	border: none; /* no border for a flat push button */\n"
-"	image: url(:/pic/src/file.png); \n"
-"	min-width: 20px;\n"
-"	max-width: 20px;\n"
-"	min-height: 20px;\n"
-"	max-height: 20px;\n"
-"}\n"
-"QPushButton::hover {\n"
-"	image: url(:/pic/src/file2.png); \n"
-"}\n"
-"QPushButton:pressed {\n"
-"	image: url(:/pic/src/file.png); \n"
-"}"));
+
+        horizontalLayout_2->addWidget(pushButton_emoj);
+
         pushButton_image = new QPushButton(widget_4);
         pushButton_image->setObjectName("pushButton_image");
-        pushButton_image->setGeometry(QRect(70, 6, 20, 20));
         pushButton_image->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none; /* no border for a flat push button */\n"
 "	image: url(:/pic/src/image.png); \n"
@@ -516,6 +468,47 @@ public:
 "QPushButton:pressed {\n"
 "	image: url(:/pic/src/image.png); \n"
 "}"));
+
+        horizontalLayout_2->addWidget(pushButton_image);
+
+        pushButton_screenshot = new QPushButton(widget_4);
+        pushButton_screenshot->setObjectName("pushButton_screenshot");
+        pushButton_screenshot->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	border: none; /* no border for a flat push button */\n"
+"	image: url(:/pic/src/screenshot.png); \n"
+"	min-width: 20px;\n"
+"	max-width: 20px;\n"
+"	min-height: 20px;\n"
+"	max-height: 20px;\n"
+"}\n"
+"QPushButton::hover {\n"
+"	image: url(:/pic/src/screenshot2.png); \n"
+"}\n"
+"QPushButton:pressed {\n"
+"	image: url(:/pic/src/screenshot.png); \n"
+"}"));
+
+        horizontalLayout_2->addWidget(pushButton_screenshot);
+
+        pushButton_file = new QPushButton(widget_4);
+        pushButton_file->setObjectName("pushButton_file");
+        pushButton_file->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	border: none; /* no border for a flat push button */\n"
+"	image: url(:/pic/src/file.png); \n"
+"	min-width: 20px;\n"
+"	max-width: 20px;\n"
+"	min-height: 20px;\n"
+"	max-height: 20px;\n"
+"}\n"
+"QPushButton::hover {\n"
+"	image: url(:/pic/src/file2.png); \n"
+"}\n"
+"QPushButton:pressed {\n"
+"	image: url(:/pic/src/file.png); \n"
+"}"));
+
+        horizontalLayout_2->addWidget(pushButton_file);
+
 
         gridLayout_3->addWidget(widget_4, 1, 0, 1, 1);
 
@@ -616,10 +609,9 @@ public:
         label_info->setText(QCoreApplication::translate("Client", "\350\201\212\345\244\251\344\277\241\346\201\257", nullptr));
         pushButton->setText(QString());
         pushButton_emoj->setText(QString());
-        pushButton_screenshot->setText(QString());
-        pushButton_chat->setText(QString());
-        pushButton_file->setText(QString());
         pushButton_image->setText(QString());
+        pushButton_screenshot->setText(QString());
+        pushButton_file->setText(QString());
         pushBtn_send->setText(QCoreApplication::translate("Client", "\345\217\221\351\200\201", nullptr));
     } // retranslateUi
 

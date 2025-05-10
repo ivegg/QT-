@@ -37,10 +37,10 @@ void CommandHandler::Login(int account, string password, Session *session)
 {
     json msg;
     msg["cmd"] = cmd_login;
-    Statement query(db, "select name,signature,icon from user where account=? and password=?");
+    // 查询name,signature,icon,online
+    Statement query(db, "select name,signature,icon,online from user where account=? and password=?");
     query.bind(1, account);
     query.bind(2, password);
-    // 执行query语句获取查询结果,判断查询结果，如果查询结果为空，说明账号或密码错误，否则登录成功
     if (!query.executeStep())
     {
         std::cout << "账号或密码错误" << std::endl;
@@ -49,20 +49,24 @@ void CommandHandler::Login(int account, string password, Session *session)
     }
     else
     {
-        std::cout << "登录成功" << std::endl;
-        msg["res"] = "yes";
-        for(int i = 0;i<3;i++)
-        {
-            msg["info"][i] = query.getColumn(i).getString();
+        int online = query.getColumn(3).getInt();
+        if (online == 1) {
+            msg["res"] = "no";
+            msg["err"] = "该账号已在其他地方登录";
+        } else {
+            std::cout << "登录成功" << std::endl;
+            msg["res"] = "yes";
+            for(int i = 0; i < 3; i++)
+                msg["info"][i] = query.getColumn(i).getString();
+            UserInfo info = {account, password, msg["info"][0], msg["info"][1], 1, msg["info"][2]};
+            session->SetUserInfo(info);
+            userMap[session->GetSocket()] = account;
+            session->SetAccount(account);
+            session->SetIsLogin(true);
+            Statement query2(db, "update user set online=1 where account=?");
+            query2.bind(1, account);
+            query2.exec();
         }
-        UserInfo info = {account, password, msg["info"][0], msg["info"][1], 1, msg["info"][2]};
-        session->SetUserInfo(info);
-        userMap[session->GetSocket()] = account;
-        session->SetAccount(account);
-        session->SetIsLogin(true);
-        Statement query(db, "update user set online=1 where account=?");
-        query.bind(1, account);
-        query.exec();
     }
     session->sendMsg(msg);
 }
@@ -151,9 +155,11 @@ void CommandHandler::AddFriendRequest(UserInfo info, int account, std::string se
         int fd = session->getFriendFd(account);
         if (fd <= 0)
         {
-            msg["res"] = "no";
-            msg["err"] = "对方不在线";
-            session->sendMsg(msg);
+            // 修改：返回添加好友响应，res为offline
+            json resp;
+            resp["cmd"] = cmd_add_friend_response;
+            resp["res"] = "offline";
+            session->sendMsg(resp);
             return;
         }
         else

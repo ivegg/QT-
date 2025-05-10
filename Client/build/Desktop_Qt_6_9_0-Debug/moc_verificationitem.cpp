@@ -42,14 +42,14 @@ template <> constexpr inline auto VerificationItem::qt_create_metaobjectdata<qt_
         "VerificationItem",
         "on_comboBox_currentIndexChanged",
         "",
-        "arg1",
+        "index",
         "on_pushButton_clicked"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Slot 'on_comboBox_currentIndexChanged'
-        QtMocHelpers::SlotData<void(const QString &)>(1, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::QString, 3 },
+        QtMocHelpers::SlotData<void(int)>(1, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 3 },
         }}),
         // Slot 'on_pushButton_clicked'
         QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
@@ -76,7 +76,7 @@ void VerificationItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     auto *_t = static_cast<VerificationItem *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->on_comboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 0: _t->on_comboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 1: _t->on_pushButton_clicked(); break;
         default: ;
         }

@@ -302,8 +302,11 @@ void Logging::CmdHandler(json msg)
             static Client *client = new Client(info, t);
             client->show();
             this->close();
-        } else
-            qDebug() << msg.value("err").toString() << endl;
+        } else {
+            // 登录失败，弹窗显示服务器返回的err信息
+            msgBox->setText(msg.value("err").toString());
+            msgBox->exec();
+        }
         break;
     }
 

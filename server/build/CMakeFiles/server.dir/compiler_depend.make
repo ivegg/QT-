@@ -1593,7 +1593,16 @@ CMakeFiles/server.dir/main.cpp.o: /home/share/chat-forge/server/main.cpp \
   /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/detail/macro_unscope.hpp \
   /home/share/chat-forge/server/thirdparty/json-develop/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
   /home/share/chat-forge/server/chatTask.h \
-  /home/share/chat-forge/server/session.h
+  /home/share/chat-forge/server/session.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h
 
 CMakeFiles/server.dir/session.cpp.o: /home/share/chat-forge/server/session.cpp \
   /usr/include/stdc-predef.h \
@@ -1995,6 +2004,14 @@ CMakeFiles/server.dir/session.cpp.o: /home/share/chat-forge/server/session.cpp \
   /home/share/chat-forge/server/CommandHandler.h
 
 
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
 /home/share/chat-forge/server/main.cpp:
 
 /home/share/chat-forge/server/common.cpp:
@@ -2050,6 +2067,8 @@ CMakeFiles/server.dir/session.cpp.o: /home/share/chat-forge/server/session.cpp \
 /usr/include/c++/11/bits/valarray_after.h:
 
 /usr/include/c++/11/bits/slice_array.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
 
 /usr/include/c++/11/bits/valarray_before.h:
 
@@ -2233,6 +2252,8 @@ CMakeFiles/server.dir/session.cpp.o: /home/share/chat-forge/server/session.cpp \
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
+/usr/include/linux/limits.h:
+
 /usr/include/c++/11/bits/shared_ptr_base.h:
 
 /usr/include/c++/11/bits/basic_string.h:
@@ -2373,6 +2394,8 @@ CMakeFiles/server.dir/session.cpp.o: /home/share/chat-forge/server/session.cpp \
 
 /usr/include/c++/11/exception:
 
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
 /usr/include/c++/11/string:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
@@ -2468,6 +2491,8 @@ CMakeFiles/server.dir/session.cpp.o: /home/share/chat-forge/server/session.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
 
 /usr/include/features-time64.h:
 
@@ -2676,6 +2701,8 @@ CMakeFiles/server.dir/session.cpp.o: /home/share/chat-forge/server/session.cpp \
 /home/share/chat-forge/server/thirdparty/SQLiteCpp/include/SQLiteCpp/Utils.h:
 
 /usr/include/c++/11/bits/istream.tcc:
+
+/usr/include/limits.h:
 
 /usr/include/c++/11/bits/stl_relops.h:
 

@@ -111,7 +111,11 @@ int Session::handleMsg(json msg)
             else res = "拒绝";
             if(fd > 0)
             {
-                string msg1 = std::to_string(account) + res + "了你的好友请求";
+                string msg1;
+                if(msg.at("reply") == "yes")
+                    msg1 = std::to_string(account) + res + "了你的好友请求";
+                else
+                    msg1 = "对方拒绝了你的好友请求";
                 sendSystemMsg(fd,msg1);
             }
             

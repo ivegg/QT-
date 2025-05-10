@@ -262,7 +262,8 @@ void Client::changeEvent(QEvent *event)
 // 添加好友按钮槽函数，弹出添加好友窗口
 void Client::on_pushButton_addFriend_clicked()
 {
-    AddFriend *add = new AddFriend(selfInfo,t);
+    QString text = ui->lineEdit->text(); // 获取A框内容
+    AddFriend *add = new AddFriend(selfInfo, t, nullptr, text);
     add->show();
 }
 
@@ -301,6 +302,7 @@ void Client::ClientMsgHandler(json msg)
         QString res = msg["res"].toString();
         if(res == "yes")
             RefreshFriendList();
+        t->CallAddFriend(msg);
         break;
     }
     case cmd_friend_list: {
@@ -329,7 +331,13 @@ void Client::ClientMsgHandler(json msg)
         break;
     }
     case cmd_friend_chat: {
-        int account = msg["sender"].toInt();
+        int sender = msg["sender"].toInt();
+        QString content = msg["msg"].toString();
+        if (sender == 10000) {
+            QMessageBox::information(this, "系统消息", content);
+            return;
+        }
+        int account = msg["account"].toInt();
         QString friendKey = QString("f_%1").arg(account);
         FriendItem *item = nullptr;
         ChatWindow *chatWindow;
@@ -364,7 +372,7 @@ void Client::ClientMsgHandler(json msg)
         {
             item = messageItemMap.value(friendKey);
         }
-        QString pushMsg = StringTool::MergeSendTimeMsg(currentDateTime, 1,chatWindow->GetName());
+        QString pushMsg = StringTool::MergeSendTimeMsg(currentDateTime, 1, "");
         chatWindow->pushMsg(pushMsg, 1);
         //push msg on chat window
         ContentType type = (ContentType)msg["type"].toInt();
@@ -495,7 +503,7 @@ void Client::ClientMsgHandler(json msg)
         switch (type) {
         case ContentType::TextOnly: {
             QString content = msg["content"].toString();
-            QString pushMsg = StringTool::MergeSendTimeMsg(currentDateTime, 1,senderName);
+            QString pushMsg = StringTool::MergeSendTimeMsg(currentDateTime, 1, "");
             chatWindow->pushMsg(pushMsg, 1);
             chatWindow->sendMessage(content, 1);
             item->SetLastMsg(content);
@@ -503,7 +511,7 @@ void Client::ClientMsgHandler(json msg)
         }
         case ContentType::ImageOnly: {
             QString sendImage = msg["content"].toString();
-            QString pushMsg = StringTool::MergeSendTimeMsg(currentDateTime, 1,senderName);
+            QString pushMsg = StringTool::MergeSendTimeMsg(currentDateTime, 1, "");
             chatWindow->pushMsg(pushMsg, 1);
             chatWindow->sendImages(StringTool::GetImagesFromHtml(sendImage), 0);
             item->SetLastMsg("[图片]");
@@ -512,7 +520,7 @@ void Client::ClientMsgHandler(json msg)
         case ContentType::MixedContent: {
             QString content = msg["content"].toString();
             //QList<QPair<QString, QImage>> contentList = StringTool::extractContent(content);
-            QString pushMsg = StringTool::MergeSendTimeMsg(currentDateTime, 1,senderName);
+            QString pushMsg = StringTool::MergeSendTimeMsg(currentDateTime, 1, "");
             chatWindow->pushMsg(pushMsg, 1);
             //chatWindow->sendMixedContent(contentList, 1);
             chatWindow->sendContentFromInput(content, 1);
@@ -712,7 +720,8 @@ void Client::on_pushBtn_send_clicked()
     ChatWindow* chatWindow = qobject_cast<ChatWindow*>(ui->stackedWidget->currentWidget());
     int account = chatWindow->GetAccount();
 
-    QString pushMsg = StringTool::MergeSendTimeMsg(currentDateTime, 0);
+    // 只显示时间，不显示用户名
+    QString pushMsg = StringTool::MergeSendTimeMsg(currentDateTime, 0, "");
     json msg = {
         {"cmd", chatWindow->GetType() ? cmd_group_chat : cmd_friend_chat},
         {"account", account},
@@ -756,8 +765,6 @@ void Client::on_pushBtn_send_clicked()
     }
     case MixedContent: {
         QString html = ui->textEdit_send->toHtml();
-        //QList<QPair<QString, QImage>> contentList = StringTool::extractContent(html);
-        //chatWindow->sendMixedContent(contentList,0);
         chatWindow->pushMsg(pushMsg, 0);
         chatWindow->sendContentFromInput(html, 0);
         msg["content"] = html;
@@ -767,7 +774,6 @@ void Client::on_pushBtn_send_clicked()
 
     }
     ui->textEdit_send->clear();
-    //chatWindow->sendMessage(msg["content"].toString(), 0);
     t->SendMsg(msg);
 }
 
